@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
 import useSound from 'use-sound';
@@ -68,6 +69,8 @@ function App() {
 
 export default App;
 =======
+=======
+>>>>>>> f95bbb1... Initialize project using Create React App
 import logo from './logo.svg';
 import './App.css';
 
@@ -93,4 +96,7 @@ function App() {
 }
 
 export default App;
+<<<<<<< HEAD
+>>>>>>> f95bbb1... Initialize project using Create React App
+=======
 >>>>>>> f95bbb1... Initialize project using Create React App

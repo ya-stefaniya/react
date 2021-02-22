@@ -1,6 +1,7 @@
 {
   "name": "game",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "proxy": "http://127.0.0.1:5000",
   "version": "0.1.0",
   "private": true,
@@ -9,10 +10,15 @@
   "version": "0.1.0",
   "private": true,
 >>>>>>> f95bbb1... Initialize project using Create React App
+=======
+  "version": "0.1.0",
+  "private": true,
+>>>>>>> f95bbb1... Initialize project using Create React App
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "a11y-react-emoji": "^1.1.2",
     "axios": "^0.21.1",
@@ -31,6 +37,11 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
 >>>>>>> f95bbb1... Initialize project using Create React App
+=======
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.2",
+>>>>>>> f95bbb1... Initialize project using Create React App
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -38,8 +49,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "eject": "react-scripts eject",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
+=======
+    "eject": "react-scripts eject"
+>>>>>>> f95bbb1... Initialize project using Create React App
 =======
     "eject": "react-scripts eject"
 >>>>>>> f95bbb1... Initialize project using Create React App
