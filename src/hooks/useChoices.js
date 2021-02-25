@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 
 export function useChoices() {
@@ -21,5 +22,12 @@ export function useChoices() {
     //     localStorage.setItem("compChoice", compChoice);
     // }, [compChoice]);
 
+=======
+import { useState } from "react";
+
+export function useChoices() {
+    const [humanChoice, setHumanChoice] = useState(null);
+    const [compChoice, setCompChoice] = useState(null);
+>>>>>>> 01b41c5... add:basic game
     return { humanChoice, setHumanChoice, compChoice, setCompChoice };
 } 

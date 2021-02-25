@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
 import useSound from 'use-sound';
@@ -73,30 +74,40 @@ export default App;
 >>>>>>> f95bbb1... Initialize project using Create React App
 import logo from './logo.svg';
 import './App.css';
+=======
+import { React, useState } from "react";
+import './css/style.scss';
+import { Header } from "./components/Header";
+import { useLevel } from './hooks/useLevel';
+
+import { ButtonsStart } from "./components/ButtonsStart";
+import { GameEasy } from "./components/GameEasy"
+import { GameHard } from "./components/GameHard"
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+>>>>>>> 01b41c5... add:basic game
 
 function App() {
+  const levels = useLevel();
+  console.log(levels.level);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App" >
+        <Header />
+        {levels.level ? <Route path='/game-easy' component={GameEasy} /> : ""}
+        {levels.level ? <Route path='/game-hard' component={GameHard} /> : ""}
+        {levels.level ? ' ' : <ButtonsStart {...levels} />}
+      </div>
+    </Router>
   );
 }
 
+<<<<<<< HEAD
 export default App;
 <<<<<<< HEAD
 >>>>>>> f95bbb1... Initialize project using Create React App
 =======
 >>>>>>> f95bbb1... Initialize project using Create React App
+=======
+export default App;
+>>>>>>> 01b41c5... add:basic game

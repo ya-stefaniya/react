@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin answer($color){
     font-size: 9rem;
     border: 5px solid $color;
@@ -9,12 +10,28 @@
     display: flex;
     flex-direction: column;
    // transform: $transform;
+=======
+@mixin icon($pic) {
+    background: url($pic) no-repeat center;
+    background-size: 85%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #ddbf8a;
+    border-radius: 20px;
+}
+
+@mixin card($transform) {
+    display: flex;
+    flex-direction: column;
+    transform: $transform;
+>>>>>>> 01b41c5... add:basic game
 }
 
 @mixin caption() {
     font-family: inherit;
     font-size: 1.5rem;
     text-align: center;
+<<<<<<< HEAD
     font-style: italic;
 }
 @mixin cardAnimation($color){
@@ -31,6 +48,12 @@
         100% {transform:  scaleX(1) scaleY(1);}
     }
 }
+=======
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+>>>>>>> 01b41c5... add:basic game
 html {
     box-sizing: border-box;
     overflow: hidden;
@@ -63,15 +86,19 @@ h3 {
     font-size: 2rem;
     font-weight: 100;
 }
+<<<<<<< HEAD
 h2{
     font-weight: 100;
 }
+=======
+>>>>>>> 01b41c5... add:basic game
 
 a {
     text-decoration: none;
 }
 
 header {
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,6 +107,15 @@ header {
     background-image: linear-gradient(90deg, #e8bc78 0%, #aacbdc 100%);
     cursor: pointer;
     height: 6.5rem;
+=======
+    color: rgba(0, 0, 0, 0.555);
+    background-color: #e8bc78;
+    background-image: linear-gradient(90deg, #e8bc78 0%, #aacbdc 100%);
+    display: flex;
+    cursor: pointer;
+    height: 6.5rem;
+    align-items: center;
+>>>>>>> 01b41c5... add:basic game
     border-bottom: 2px solid #c7c2c2;
 
     .logo {
@@ -98,11 +134,17 @@ header {
         margin: 0 0.5rem;
     }
 }
+<<<<<<< HEAD
 .fullscreen-enabled {
     background: rgb(255, 255, 255);
 }
 .container {
     margin: 0 15rem;
+=======
+
+.container {
+    margin: 0 9rem;
+>>>>>>> 01b41c5... add:basic game
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -111,27 +153,38 @@ header {
     .result {
         display: flex;
         justify-content: space-around;
+<<<<<<< HEAD
         .counter{
             font-size: 3rem;
             font-weight: 200;
             margin: auto 0;
         }
+=======
+>>>>>>> 01b41c5... add:basic game
     }
 
     .players {
         display: flex;
         justify-content: space-around;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 01b41c5... add:basic game
         .result-header {
             display: flex;
             align-items: center;
             justify-content: space-around;
             width: 15rem;
+<<<<<<< HEAD
             &:first-child{
             text-transform: uppercase;
                 h3{
                 font-weight: 300;
                 }
             }
+=======
+
+>>>>>>> 01b41c5... add:basic game
             span {
                 font-size: 2rem;
                 font-weight: 200;
@@ -143,9 +196,15 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+<<<<<<< HEAD
         
         span {
             font-size: 6.2rem;
+=======
+
+        span {
+            font-size: 4.2rem;
+>>>>>>> 01b41c5... add:basic game
             margin: 0 0.5rem;
             cursor: pointer;
 
@@ -158,13 +217,17 @@ header {
                 transform: rotate(7deg);
             }
         }
+<<<<<<< HEAD
         &.icons-hard span{
             font-size: 5rem;
         }
+=======
+>>>>>>> 01b41c5... add:basic game
     }
 
 }
 
+<<<<<<< HEAD
 .score{
     position: absolute;
     text-align: center;
@@ -234,11 +297,30 @@ header {
 .human-choice,
 .comp-choice {
     @include card();
+=======
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+
+}
+
+
+
+//картинки-карты игровые
+.human-choice,
+.comp-choice {
+    @include card(translateY(1rem));
+
+>>>>>>> 01b41c5... add:basic game
     span {
         @include caption();
     }
 }
 
+<<<<<<< HEAD
 .back{
     width: 9rem;
     height: 3.2rem;
@@ -261,16 +343,60 @@ header {
         transform: translateY(7px);
     }
 }
+=======
+
+.paper {
+    @include icon('../images/hand-paper2.png');
+
+    &.comp {
+        transform: translate3d(0, 1in, 0);
+    }
+}
+
+
+.scissors {
+    @include icon('../images/sci-hand.png');
+    position: relative;
+
+
+    &.comp {
+        transform: translate3d(-1rem, 1in, 0);
+
+        &:before {
+            content: 'scissors';
+        }
+    }
+}
+
+.rock {
+    @include icon('../images/fist.png');
+
+    &.comp {
+        transform: translate3d(0, 1in, 0);
+    }
+}
+
+
+
+>>>>>>> 01b41c5... add:basic game
 .buttons-start {
     .main-screen {
         display: flex;
         position: relative;
+<<<<<<< HEAD
         flex-direction: column;
         align-items: center;
         text-align: center;
         justify-content: center;
         margin: 3rem 5rem;
         height: 100%;
+=======
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: calc(100vh - 5rem);
+
+>>>>>>> 01b41c5... add:basic game
         &:before {
             content: '';
             position: absolute;
@@ -278,6 +404,7 @@ header {
             width: 2px;
             height: 500px;
         }
+<<<<<<< HEAD
         .name-input{
             margin-bottom: 3rem;
             border: none;
@@ -494,10 +621,77 @@ header {
             &.icons-hard{
                 span{
                 font-size: 6.2rem;
+=======
+
+        .start-easy,
+        .start-hard {
+            display: flex;
+            align-items: center;
+        }
+
+        .button-icons {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 4rem;
+            }
+        }
+
+        .start {
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            padding: 2rem 3rem;
+            margin: 1rem 5rem;
+            border-color: rgba(196, 187, 187, 0.411);
+            border-radius: 22px;
+            box-shadow: 0 0 40px 40px #e5b976 inset,
+                0 0 0 0 #e5b976;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white;
+            transition: .15s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
+                color: #e5b976;
+            }
+
+            &.hard:hover {
+                background-image: url('../images/bbth.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                color: black;
+            }
+        }
+
+        .start-hard {
+            .button-icons {
+                position: relative;
+
+                &::before {
+                    content: 'Только на тру фэнс Теории Большого Взрыва!';
+                    position: absolute;
+                    top: 2rem;
+                    left: 6rem;
+                    width: 14rem;
+                    padding: 1em;
+                    background: #fff;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    -webkit-transform: rotate(5deg) translate(-1em, 1em);
+                    transform: rotate(5deg) translate(-1em, 1em);
+                    border-top: 5px solid #da513d;
+                    border-bottom: 5px solid #ddd;
+>>>>>>> 01b41c5... add:basic game
                 }
             }
         }
     }
+<<<<<<< HEAD
     .human-choice,
     .comp-choice{
         .answer{
@@ -545,4 +739,7 @@ header {
         font-size: 3rem;
         }
     }
+=======
+
+>>>>>>> 01b41c5... add:basic game
 }

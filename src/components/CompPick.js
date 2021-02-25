@@ -2,6 +2,7 @@
 import { React, useState, useEffect } from "react";
 
 
+<<<<<<< HEAD
 export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
 
     return (
@@ -11,6 +12,16 @@ export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
                 <div className='answer'>
                     {compChoice && compChoice.symbol}
                 </div>
+=======
+export const CompPick = ({ compChoice, humanChoice }) => {
+
+
+    return (
+        <>
+            {humanChoice && <div className="comp-choice">
+                <span>{compChoice}</span>
+                <img className={compChoice} />
+>>>>>>> 01b41c5... add:basic game
             </div>
             }
         </>
