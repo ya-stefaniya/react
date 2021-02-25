@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { InfoHard } from './InfoHard';
@@ -115,11 +116,14 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
         </main >)
 };
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 import React from "react";
 import { Link } from 'react-router-dom';
 
 export const ButtonsStart = ({ level, setLevel }) => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <main className="buttons-start">
 =======
@@ -142,6 +146,9 @@ export const ButtonsStart = ({ level, setLevel }) => (
 
     return (<main className="buttons-start">
 >>>>>>> 1746332... add: keys useeffect
+=======
+    <main className="buttons-start">
+>>>>>>> 01b41c5... add:basic game
         <section className='main-screen'>
             <div className="start-easy">
                 <div className="button-icons">
@@ -153,6 +160,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                     <div>
                         <button className="start"
 <<<<<<< HEAD
+<<<<<<< HEAD
                             onClick={() => setLevel('game-easy')}
                         >Начать</button>
 =======
@@ -163,6 +171,10 @@ export const ButtonsStart = ({ level, setLevel }) => (
                                 if (compChoice) reload();
                             }}>start</button>
 >>>>>>> b3666db... add: sounds
+=======
+                            onClick={() => setLevel('game-easy')}
+                        >Начать</button>
+>>>>>>> 01b41c5... add:basic game
                     </div>
                 </Link>
             </div>
@@ -170,6 +182,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                 <Link to='/game-hard'>
                     <div>
                         <button className="start hard"
+<<<<<<< HEAD
 <<<<<<< HEAD
                             onClick={() => setLevel('game-hard')}
                         >Начать</button>
@@ -243,3 +256,20 @@ export const ButtonsStart = ({ level, setLevel }) => (
         </main >)
 };
 >>>>>>> 192116d... add:footer
+=======
+                            onClick={() => setLevel('game-hard')}
+                        >Начать</button>
+                    </div>
+                </Link>
+                <div className="button-icons">
+                    <span>&#128074;</span>
+                    <span>&#128075;</span>
+                    <span>&#9996;</span>
+                    <span>&#129422;</span>
+                    <span>&#128406;</span>
+                </div>
+            </div>
+        </section>
+    </main>
+);
+>>>>>>> 01b41c5... add:basic game

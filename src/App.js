@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
 <<<<<<< HEAD
@@ -215,6 +216,8 @@ export default App;
 import logo from './logo.svg';
 import './App.css';
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 import { React, useState } from "react";
 import './css/style.scss';
 import { Header } from "./components/Header";
@@ -223,6 +226,7 @@ import { useLevel } from './hooks/useLevel';
 import { ButtonsStart } from "./components/ButtonsStart";
 import { GameEasy } from "./components/GameEasy"
 import { GameHard } from "./components/GameHard"
+<<<<<<< HEAD
 =======
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
 >>>>>>> d123f5b... add: mute from keys
@@ -238,6 +242,10 @@ import { GameHard } from "./components/GameHard"
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 >>>>>>> 01b41c5... add:basic game
+=======
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+>>>>>>> 01b41c5... add:basic game
 
 function App() {
   const levels = useLevel();
@@ -249,6 +257,7 @@ function App() {
         {levels.level ? <Route path='/game-easy' component={GameEasy} /> : ""}
         {levels.level ? <Route path='/game-hard' component={GameHard} /> : ""}
         {levels.level ? ' ' : <ButtonsStart {...levels} />}
+<<<<<<< HEAD
 =======
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
         <Footer />
@@ -257,17 +266,23 @@ function App() {
 >>>>>>> 192116d... add:footer
 =======
 >>>>>>> be0769f... del: back-files
+=======
+>>>>>>> 01b41c5... add:basic game
       </div>
     </Router>
   );
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default App;
 <<<<<<< HEAD
 >>>>>>> f95bbb1... Initialize project using Create React App
 =======
 >>>>>>> f95bbb1... Initialize project using Create React App
+=======
+export default App;
+>>>>>>> 01b41c5... add:basic game
 =======
 export default App;
 >>>>>>> 01b41c5... add:basic game

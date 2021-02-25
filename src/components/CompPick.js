@@ -5,6 +5,7 @@ import { React, useState, useEffect } from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
 
     return (
@@ -29,6 +30,8 @@ export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
                     {compChoice && compChoice.symbol}
                 </div>
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 export const CompPick = ({ compChoice, humanChoice }) => {
 
 
@@ -37,6 +40,9 @@ export const CompPick = ({ compChoice, humanChoice }) => {
             {humanChoice && <div className="comp-choice">
                 <span>{compChoice}</span>
                 <img className={compChoice} />
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
             </div>
             }

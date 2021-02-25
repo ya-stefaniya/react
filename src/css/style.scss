@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @mixin answer($color){
     font-size: 9rem;
     border: 5px solid $color;
@@ -12,6 +13,8 @@
     flex-direction: column;
    // transform: $transform;
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 @mixin icon($pic) {
     background: url($pic) no-repeat center;
     background-size: 85%;
@@ -25,18 +28,22 @@
     display: flex;
     flex-direction: column;
     transform: $transform;
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
     display: flex;
     flex-direction: column;
    // transform: $transform;
 >>>>>>> d123f5b... add: mute from keys
+=======
+>>>>>>> 01b41c5... add:basic game
 }
 
 @mixin caption() {
     font-family: inherit;
     font-size: 1.5rem;
     text-align: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-style: italic;
 }
@@ -77,6 +84,12 @@
     }
 }
 >>>>>>> d123f5b... add: mute from keys
+=======
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+>>>>>>> 01b41c5... add:basic game
 html {
     box-sizing: border-box;
     overflow: hidden;
@@ -110,9 +123,12 @@ h3 {
     font-weight: 100;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 h2{
     font-weight: 100;
 }
+=======
+>>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 01b41c5... add:basic game
 
@@ -121,6 +137,7 @@ a {
 }
 
 header {
+<<<<<<< HEAD
 <<<<<<< HEAD
     display: flex;
     justify-content: space-between;
@@ -135,12 +152,18 @@ header {
     color: rgba(0, 0, 0, 0.555);
 =======
 >>>>>>> 3ebf737... add: sounds from app
+=======
+    color: rgba(0, 0, 0, 0.555);
+>>>>>>> 01b41c5... add:basic game
     background-color: #e8bc78;
     background-image: linear-gradient(90deg, #e8bc78 0%, #aacbdc 100%);
     display: flex;
     cursor: pointer;
     height: 6.5rem;
     align-items: center;
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
     border-bottom: 2px solid #c7c2c2;
 
@@ -162,6 +185,7 @@ header {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 192116d... add:footer
 .fullscreen-enabled {
@@ -169,6 +193,11 @@ header {
 }
 .container {
     margin: 0 15rem;
+=======
+
+.container {
+    margin: 0 9rem;
+>>>>>>> 01b41c5... add:basic game
 =======
 
 .container {
@@ -184,6 +213,7 @@ header {
         justify-content: space-around;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3ebf737... add: sounds from app
         .counter{
@@ -196,6 +226,8 @@ header {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 3ebf737... add: sounds from app
+=======
+>>>>>>> 01b41c5... add:basic game
     }
 
     .players {
@@ -203,16 +235,21 @@ header {
         justify-content: space-around;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 192116d... add:footer
+=======
+
+>>>>>>> 01b41c5... add:basic game
         .result-header {
             display: flex;
             align-items: center;
             justify-content: space-around;
             width: 15rem;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -229,6 +266,9 @@ header {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 192116d... add:footer
+=======
+
+>>>>>>> 01b41c5... add:basic game
             span {
                 font-size: 2rem;
                 font-weight: 200;
@@ -241,9 +281,15 @@ header {
         flex-direction: column;
         align-items: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         span {
             font-size: 6.2rem;
+=======
+
+        span {
+            font-size: 4.2rem;
+>>>>>>> 01b41c5... add:basic game
 =======
 
         span {
@@ -261,6 +307,7 @@ header {
                 transform: rotate(7deg);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         &.icons-hard span{
             font-size: 5rem;
@@ -369,6 +416,12 @@ header {
     @include card();
 <<<<<<< HEAD
 =======
+=======
+    }
+
+}
+
+>>>>>>> 01b41c5... add:basic game
 .score {
     display: flex;
     flex-direction: column;
@@ -385,14 +438,18 @@ header {
 .comp-choice {
     @include card(translateY(1rem));
 
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> d123f5b... add: mute from keys
+=======
+>>>>>>> 01b41c5... add:basic game
     span {
         @include caption();
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -428,6 +485,8 @@ header {
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 
 .paper {
     @include icon('../images/hand-paper2.png');
@@ -462,13 +521,17 @@ header {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 0bf1a78... add: change-level button
+=======
+>>>>>>> 01b41c5... add:basic game
 .buttons-start {
     .main-screen {
         display: flex;
         position: relative;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -480,11 +543,16 @@ header {
         margin: 3rem 5rem;
         height: 100%;
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
         align-items: center;
         text-align: center;
         justify-content: center;
         height: calc(100vh - 5rem);
 
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
         &:before {
             content: '';
@@ -493,6 +561,7 @@ header {
             width: 2px;
             height: 500px;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -715,21 +784,31 @@ header {
                 span{
                 font-size: 6.2rem;
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 
         .start-easy,
         .start-hard {
             display: flex;
             align-items: center;
+<<<<<<< HEAD
 =======
 >>>>>>> 192116d... add:footer
         }
         .start-options{
             display: flex;
 <<<<<<< HEAD
+=======
+        }
+
+        .button-icons {
+            display: flex;
+>>>>>>> 01b41c5... add:basic game
             flex-direction: column;
 
             span {
                 font-size: 4rem;
+<<<<<<< HEAD
 =======
             flex-direction: row;
             .start-easy,
@@ -740,6 +819,11 @@ header {
             }
 
 <<<<<<< HEAD
+=======
+            }
+        }
+
+>>>>>>> 01b41c5... add:basic game
         .start {
             text-decoration: none;
             outline: none;
@@ -747,6 +831,9 @@ header {
             padding: 2rem 3rem;
             margin: 1rem 5rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 01b41c5... add:basic game
             border-color: rgba(196, 187, 187, 0.411);
             border-radius: 22px;
             box-shadow: 0 0 40px 40px #e5b976 inset,
@@ -757,6 +844,7 @@ header {
             letter-spacing: 2px;
             color: white;
             transition: .15s ease-in-out;
+<<<<<<< HEAD
 =======
             text-transform: uppercase;
             letter-spacing: 2.5px;
@@ -775,6 +863,14 @@ header {
                 color: #fff;
                 transform: translateY(7px);
             }
+=======
+
+            &:hover {
+                box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
+                color: #e5b976;
+            }
+
+>>>>>>> 01b41c5... add:basic game
             &.hard:hover {
                 background-image: url('../images/bbth.png');
                 background-repeat: no-repeat;
@@ -786,6 +882,10 @@ header {
         .start-hard {
             .button-icons {
                 position: relative;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 01b41c5... add:basic game
                 &::before {
                     content: 'Только на тру фэнс Теории Большого Взрыва!';
                     position: absolute;
@@ -800,6 +900,7 @@ header {
                     transform: rotate(5deg) translate(-1em, 1em);
                     border-top: 5px solid #da513d;
                     border-bottom: 5px solid #ddd;
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
             .button-icons {
@@ -1012,10 +1113,13 @@ header {
             &.icons-hard{
                 span{
                 font-size: 6.2rem;
+=======
+>>>>>>> 01b41c5... add:basic game
                 }
             }
         }
     }
+<<<<<<< HEAD
     .human-choice,
     .comp-choice{
         .answer{
@@ -1061,6 +1165,9 @@ header {
         font-size: 3rem;
         }
     }
+=======
+
+>>>>>>> 01b41c5... add:basic game
 =======
 
 >>>>>>> 01b41c5... add:basic game

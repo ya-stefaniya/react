@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+@charset "UTF-8";
+>>>>>>> 01b41c5... add:basic game
 =======
 @charset "UTF-8";
 >>>>>>> 01b41c5... add:basic game
@@ -36,10 +40,13 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 h2 {
   font-weight: 100;
 }
 
+=======
+>>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 01b41c5... add:basic game
 a {
@@ -47,6 +54,7 @@ a {
 }
 
 header {
+<<<<<<< HEAD
 <<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,6 +76,9 @@ header {
   color: rgba(0, 0, 0, 0.555);
 =======
 >>>>>>> 3ebf737... add: sounds from app
+=======
+  color: rgba(0, 0, 0, 0.555);
+>>>>>>> 01b41c5... add:basic game
   background-color: #e8bc78;
   background-image: -webkit-gradient(linear, left top, right top, from(#e8bc78), to(#aacbdc));
   background-image: linear-gradient(90deg, #e8bc78 0%, #aacbdc 100%);
@@ -79,6 +90,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
   border-bottom: 2px solid #c7c2c2;
 }
@@ -108,6 +122,7 @@ header .icon {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 192116d... add:footer
 .fullscreen-enabled {
@@ -116,6 +131,10 @@ header .icon {
 
 .container {
   margin: 0 15rem;
+=======
+.container {
+  margin: 0 9rem;
+>>>>>>> 01b41c5... add:basic game
 =======
 .container {
   margin: 0 9rem;
@@ -142,6 +161,7 @@ header .icon {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3ebf737... add: sounds from app
 .container .result .counter {
@@ -155,6 +175,8 @@ header .icon {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 3ebf737... add: sounds from app
+=======
+>>>>>>> 01b41c5... add:basic game
 .container .players {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,6 +199,7 @@ header .icon {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 192116d... add:footer
 .container .players .result-header:first-child {
@@ -192,6 +215,8 @@ header .icon {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 192116d... add:footer
+=======
+>>>>>>> 01b41c5... add:basic game
 .container .players .result-header span {
   font-size: 2rem;
   font-weight: 200;
@@ -212,7 +237,11 @@ header .icon {
 
 .container .options span {
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 6.2rem;
+=======
+  font-size: 4.2rem;
+>>>>>>> 01b41c5... add:basic game
 =======
   font-size: 4.2rem;
 >>>>>>> 01b41c5... add:basic game
@@ -230,6 +259,7 @@ header .icon {
           transform: rotate(7deg);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .container .options.icons-hard span {
   font-size: 5rem;
@@ -257,6 +287,9 @@ header .icon {
 =======
 .score {
 >>>>>>> 01b41c5... add:basic game
+=======
+.score {
+>>>>>>> 01b41c5... add:basic game
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +297,7 @@ header .icon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< HEAD
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -468,10 +502,13 @@ header .icon {
   cursor: pointer;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 }
 
@@ -481,6 +518,10 @@ header .icon {
 }
 
 >>>>>>> 192116d... add:footer
+=======
+}
+
+>>>>>>> 01b41c5... add:basic game
 .human-choice,
 .comp-choice {
   display: -webkit-box;
@@ -492,12 +533,17 @@ header .icon {
           flex-direction: column;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> d123f5b... add: mute from keys
+=======
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+>>>>>>> 01b41c5... add:basic game
 }
 
 .human-choice span,
@@ -505,6 +551,7 @@ header .icon {
   font-family: inherit;
   font-size: 1.5rem;
   text-align: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
   font-style: italic;
 }
@@ -537,11 +584,16 @@ header .icon {
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
   margin-bottom: 1rem;
   font-style: italic;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 01b41c5... add:basic game
 .paper {
   background: url("../images/hand-paper2.png") no-repeat center;
   background-size: 85%;
@@ -587,6 +639,7 @@ header .icon {
 .rock.comp {
   -webkit-transform: translate3d(0, 1in, 0);
           transform: translate3d(0, 1in, 0);
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
 .back {
@@ -619,6 +672,8 @@ header .icon {
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
 >>>>>>> 0bf1a78... add: change-level button
+=======
+>>>>>>> 01b41c5... add:basic game
 }
 
 .buttons-start .main-screen {
@@ -626,6 +681,7 @@ header .icon {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -639,6 +695,8 @@ header .icon {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 192116d... add:footer
+=======
+>>>>>>> 01b41c5... add:basic game
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -648,10 +706,14 @@ header .icon {
           justify-content: center;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 192116d... add:footer
   margin: 3rem 5rem;
   height: 100%;
+=======
+  height: calc(100vh - 5rem);
+>>>>>>> 01b41c5... add:basic game
 =======
   height: calc(100vh - 5rem);
 >>>>>>> 01b41c5... add:basic game
@@ -665,6 +727,7 @@ header .icon {
   height: 500px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -705,6 +768,10 @@ header .icon {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 192116d... add:footer
+=======
+.buttons-start .main-screen .start-easy,
+.buttons-start .main-screen .start-hard {
+>>>>>>> 01b41c5... add:basic game
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,6 +782,7 @@ header .icon {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .buttons-start .main-screen .start-options .button-icons {
 =======
 .buttons-start .main-screen .button-icons {
@@ -722,6 +790,9 @@ header .icon {
 =======
 .buttons-start .main-screen .start-options .button-icons {
 >>>>>>> 192116d... add:footer
+=======
+.buttons-start .main-screen .button-icons {
+>>>>>>> 01b41c5... add:basic game
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -731,6 +802,7 @@ header .icon {
           flex-direction: column;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -781,6 +853,8 @@ header .icon {
 .buttons-start .main-screen .start-options .start-hard .button-icons::before {
   content: 'For true fans of The Big Bang Theory!';
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 .buttons-start .main-screen .button-icons span {
   font-size: 4rem;
 }
@@ -802,6 +876,7 @@ header .icon {
   color: white;
   -webkit-transition: .15s ease-in-out;
   transition: .15s ease-in-out;
+<<<<<<< HEAD
 =======
 >>>>>>> 0bf1a78... add: change-level button
 }
@@ -816,12 +891,24 @@ header .icon {
 }
 
 .buttons-start .main-screen .start-options .start.hard:hover {
+=======
+}
+
+.buttons-start .main-screen .start:hover {
+  -webkit-box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
+          box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
+  color: #e5b976;
+}
+
+.buttons-start .main-screen .start.hard:hover {
+>>>>>>> 01b41c5... add:basic game
   background-image: url("../images/bbth.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: black;
 }
 
+<<<<<<< HEAD
 .buttons-start .main-screen .start-options .start-hard .button-icons {
   position: relative;
 }
@@ -834,6 +921,14 @@ header .icon {
 .buttons-start .main-screen .start-options .start-hard .button-icons::before {
   content: 'For true fans of The Big Bang Theory!';
 >>>>>>> 192116d... add:footer
+=======
+.buttons-start .main-screen .start-hard .button-icons {
+  position: relative;
+}
+
+.buttons-start .main-screen .start-hard .button-icons::before {
+  content: 'Только на тру фэнс Теории Большого Взрыва!';
+>>>>>>> 01b41c5... add:basic game
   position: absolute;
   top: 2rem;
   left: 6rem;
@@ -848,6 +943,7 @@ header .icon {
   border-top: 5px solid #da513d;
   border-bottom: 5px solid #ddd;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 .buttons-start .main-screen .start-options .start-hard .info-hard span {
@@ -1165,6 +1261,8 @@ header .icon {
     font-size: 3rem;
   }
 }
+=======
+>>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 01b41c5... add:basic game
 /*# sourceMappingURL=style.css.map */

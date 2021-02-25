@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome, counter }) => {
 
 <<<<<<< HEAD
@@ -36,6 +37,8 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 
 export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 
@@ -50,6 +53,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
             {!humanChoice && <div className='options'>
                 {threeSymbols.map((item, index) =>
                     <Link to='/result' key={index}>
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> b3666db... add: sounds
@@ -59,11 +63,14 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 =======
 
 >>>>>>> d123f5b... add: mute from keys
+=======
+>>>>>>> 01b41c5... add:basic game
                         <Emoji
                             key={index}
                             id={item.name}
                             label={item.symbol}
                             symbol={item.symbol}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,6 +100,8 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 <<<<<<< HEAD
                 </div>}
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
                             setHumanChoice={setHumanChoice} />
                     </Link>
                 )}
@@ -101,6 +110,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
                 <span>{humanChoice}</span>
                 <img className={`${humanChoice} result `}></img>
             </div>}
+<<<<<<< HEAD
 >>>>>>> 01b41c5... add:basic game
 =======
                 </div>
@@ -108,6 +118,8 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 =======
                 </div>}
 >>>>>>> b0c379d... fix: minor
+=======
+>>>>>>> 01b41c5... add:basic game
         </>
     )
 };

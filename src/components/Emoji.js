@@ -2,6 +2,7 @@ import React from 'react';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 
 
@@ -40,6 +41,8 @@ export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 
 
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 export const Emoji = ({ id, label, symbol, setHumanChoice }) => (
     <span
         className="emoji"
@@ -58,5 +61,8 @@ export const Emoji = ({ id, label, symbol, setHumanChoice }) => (
 
 
 {/* <span id='rock' onClick={(e) => (setHumanChoice(e.target.id))}>{symbol}</span> */ }
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
 

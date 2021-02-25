@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d123f5b... add: mute from keys
 import { React, useState, useEffect } from "react";
@@ -79,6 +80,8 @@ export const Header = ({ toggleSounds, enabled, play }) => {
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 import React from "react";
 
 export const Header = () => (
@@ -91,7 +94,11 @@ export const Header = () => (
             <div className="icon settings">&#128736;</div>
         </header>
     </>
+<<<<<<< HEAD
 );
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> 192116d... add:footer
+=======
+);
+>>>>>>> 01b41c5... add:basic game

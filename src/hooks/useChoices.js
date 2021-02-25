@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 
 export function useChoices() {
@@ -23,11 +24,16 @@ export function useChoices() {
     // }, [compChoice]);
 
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 import { useState } from "react";
 
 export function useChoices() {
     const [humanChoice, setHumanChoice] = useState(null);
     const [compChoice, setCompChoice] = useState(null);
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
     return { humanChoice, setHumanChoice, compChoice, setCompChoice };
 } 

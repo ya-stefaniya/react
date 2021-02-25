@@ -4,6 +4,7 @@ import { HumanPick } from './HumanPick';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Score } from './Score';
 
 
@@ -258,6 +259,8 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
             </div>
         </>
 =======
+=======
+>>>>>>> 01b41c5... add:basic game
 import { Link } from "react-router-dom";
 
 export const Result = ({ humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
@@ -288,6 +291,9 @@ export const Result = ({ humanChoice, setHumanChoice, compChoice, setCompChoice 
             </div>
             <CompPick setCompChoice={setCompChoice} compChoice={compChoice} humanChoice={humanChoice} />
         </div>
+<<<<<<< HEAD
+>>>>>>> 01b41c5... add:basic game
+=======
 >>>>>>> 01b41c5... add:basic game
     )
 }
