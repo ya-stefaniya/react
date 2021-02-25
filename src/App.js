@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from "react";
+import './css/style.scss';
+import { Header } from "./components/Header";
+import { useLevel } from './hooks/useLevel';
+
+import { ButtonsStart } from "./components/ButtonsStart";
+import { GameEasy } from "./components/GameEasy"
+import { GameHard } from "./components/GameHard"
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
+  const levels = useLevel();
+  console.log(levels.level);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App" >
+        <Header />
+        {levels.level ? <Route path='/game-easy' component={GameEasy} /> : ""}
+        {levels.level ? <Route path='/game-hard' component={GameHard} /> : ""}
+        {levels.level ? ' ' : <ButtonsStart {...levels} />}
+      </div>
+    </Router>
   );
 }
 
