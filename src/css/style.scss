@@ -1,10 +1,8 @@
-@mixin icon($pic) {
-    background: url($pic) no-repeat center;
-    background-size: 85%;
-    width: 150px;
-    height: 150px;
-    border: 5px solid #ddbf8a;
+@mixin answer($color){
+    font-size: 9rem;
+    border: 5px solid $color;
     border-radius: 20px;
+    padding: 0.5rem 1rem;
 }
 
 @mixin card($transform) {
@@ -17,7 +15,6 @@
     font-family: inherit;
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem;
     font-style: italic;
 }
 
@@ -53,6 +50,9 @@ h3 {
     font-size: 2rem;
     font-weight: 100;
 }
+h2{
+    font-weight: 100;
+}
 
 a {
     text-decoration: none;
@@ -86,7 +86,7 @@ header {
 }
 
 .container {
-    margin: 0 9rem;
+    margin: 0 15rem;
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -120,7 +120,7 @@ header {
         align-items: center;
 
         span {
-            font-size: 4.2rem;
+            font-size: 6.2rem;
             margin: 0 0.5rem;
             cursor: pointer;
 
@@ -137,16 +137,26 @@ header {
 
 }
 
-.score {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+
+.score{
+    position: absolute;
+    border: 3px solid #a59999;
+    text-align: center;
+    bottom: 0rem;
+    padding: 1rem;
+    width: 100%;
+        h2{
+        font-size: 3rem;
+        }
+    }
 
 
+.human-choice{
+    @include answer(#ddbf8a)
 }
-
-
+.comp-choice{
+    @include answer(#afcad4)
+}
 
 //картинки-карты игровые
 .human-choice,
@@ -159,39 +169,6 @@ header {
 }
 
 
-.paper {
-    @include icon('../images/hand-paper2.png');
-
-    &.comp {
-        transform: translate3d(0, 1in, 0);
-    }
-}
-
-
-.scissors {
-    @include icon('../images/sci-hand.png');
-    position: relative;
-
-
-    &.comp {
-        transform: translate3d(-1rem, 1in, 0);
-
-        &:before {
-            content: 'scissors';
-        }
-    }
-}
-
-.rock {
-    @include icon('../images/fist.png');
-
-    &.comp {
-        transform: translate3d(0, 1in, 0);
-    }
-}
-
-
-
 .buttons-start {
     .main-screen {
         display: flex;
@@ -199,8 +176,8 @@ header {
         align-items: center;
         text-align: center;
         justify-content: center;
-        height: calc(100vh - 5rem);
-
+        margin: 6rem 5rem;
+        height: 100%;
         &:before {
             content: '';
             position: absolute;
@@ -220,7 +197,7 @@ header {
             flex-direction: column;
 
             span {
-                font-size: 4rem;
+                font-size: 5rem;
             }
         }
 
@@ -276,5 +253,44 @@ header {
             }
         }
     }
+}
 
+@media screen and (max-width: 500px){
+    :root{
+    font-size: 10px;
+    }
+    .container{
+        margin: 0 5rem;
+    }
+    .human-choice,
+    .comp-choice{
+        .answer{
+        font-size: 8rem;
+        }
+    } 
+}
+@media screen and (max-width: 310px){
+    .container{
+        margin: 0 2rem;
+    }
+    .human-choice,
+    .comp-choice{
+        .span{
+        margin: 1rem 0 0 0;
+        }
+    } 
+    .result{
+        flex-direction: column;
+        align-items: center;
+    }
+    .score{
+    position: absolute;
+    border: 2px solid #a59999;
+    bottom: 0rem;
+    padding: 1rem;
+    width: 100%;
+        h2{
+        font-size: 3rem;
+        }
+    }
 }

@@ -3,18 +3,18 @@ import { Emoji } from './Emoji';
 import { Link } from "react-router-dom";
 
 
-export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
+export const HumanPick = ({ humanChoice, setHumanChoice, level, options }) => {
 
-    const threeSymbols = [
-        { name: 'rock', symbol: '👊' },
-        { name: 'paper', symbol: '👋' },
-        { name: 'scissors', symbol: '✌' }
-    ]
+    const symbols = Object.values(options)
+
+    let result = symbols.find(obj => {
+        return obj.name === humanChoice;
+    })
 
     return (
         <>
-            {!humanChoice && <div className='options'>
-                {threeSymbols.map((item, index) =>
+            {!humanChoice ? <div className='options'>
+                {symbols.map((item, index) =>
                     <Link to='/result' key={index}>
                         <Emoji
                             key={index}
@@ -24,11 +24,13 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
                             setHumanChoice={setHumanChoice} />
                     </Link>
                 )}
-            </div>}
-            {humanChoice && <div className="human-choice" >
-                <span>{humanChoice}</span>
-                <img className={`${humanChoice} result `}></img>
-            </div>}
+            </div>
+                : <div className="human-choice here" >
+                    <span>{humanChoice}</span>
+                    <div className='answer'>
+                        {result.symbol}
+                    </div>
+                </div>}
         </>
     )
 };

@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 
 export const Header = () => (
-    <>
+    <Link to='/'>
         <header>
             <div className="logo">
                 <div className="icon">&#127918;</div>
@@ -9,5 +11,6 @@ export const Header = () => (
             </div>
             <div className="icon settings">&#128736;</div>
         </header>
-    </>
+    </Link>
+
 );

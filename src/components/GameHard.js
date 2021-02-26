@@ -1,5 +1,7 @@
 import React from "react";
 
 export const GameHard = () => (
-    <h1>GameHard</h1>
+    <div className="">
+        <h1>The Big Bang Theory Edition</h1>
+    </div>
 );

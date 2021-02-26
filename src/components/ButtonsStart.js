@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-export const ButtonsStart = ({ level, setLevel }) => (
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions }) => {
 
-    <main className="buttons-start">
+
+    return (<main className="buttons-start">
         <section className='main-screen'>
             <div className="start-easy">
                 <div className="button-icons">
@@ -11,20 +12,25 @@ export const ButtonsStart = ({ level, setLevel }) => (
                     <span>&#128075;</span>
                     <span>&#9996;</span>
                 </div>
-                <Link to='/game-easy'>
+                <Link to='/game-classic' level={level} options={options}>
                     <div>
                         <button className="start"
-                            onClick={() => setLevel('game-easy')}
-                        >Начать</button>
+                            onClick={() => {
+                                setLevel('game-classic');
+                                chooseOptions('game-classic');
+                            }}>start</button>
                     </div>
                 </Link>
             </div>
             <div className="start-hard">
-                <Link to='/game-hard'>
+                <Link to='/game-hard' >
                     <div>
                         <button className="start hard"
-                            onClick={() => setLevel('game-hard')}
-                        >Начать</button>
+                            onClick={() => {
+                                setLevel('game-hard');
+                                chooseOptions('game-hard')
+                            }}
+                        >start</button>
                     </div>
                 </Link>
                 <div className="button-icons">
@@ -36,5 +42,5 @@ export const ButtonsStart = ({ level, setLevel }) => (
                 </div>
             </div>
         </section>
-    </main>
-);
+    </main>)
+};
