@@ -3,8 +3,14 @@
 <<<<<<< HEAD
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
+<<<<<<< HEAD
 import useSound from 'use-sound';
 import sprite from './sounds/sprite.mp3';
+=======
+// import { Animated } from 'react-animated-css'
+// console.log('Animated: ', Animated);
+
+>>>>>>> b3666db... add: sounds
 
 import { Header } from "./components/Header";
 import { ButtonsStart } from "./components/ButtonsStart";
@@ -19,7 +25,14 @@ import { useOptions } from './hooks/useOptions';
 import { useChoices } from './hooks/useChoices';
 import { useOutcome } from './hooks/useOutcome';
 import { useClicks } from './hooks/useClicks';
+<<<<<<< HEAD
 import { useName } from './hooks/useName';
+=======
+
+import useSound from 'use-sound';
+import on from './sounds/click.mp3';
+
+>>>>>>> b3666db... add: sounds
 
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
@@ -30,6 +43,7 @@ function App() {
   const choices = useChoices();
   const outcome = useOutcome();
   const clicks = useClicks();
+<<<<<<< HEAD
   const name = useName('Your name');
   const [play] = useSound(sprite, {
     sprite: {
@@ -39,18 +53,47 @@ function App() {
     },
   });
 
+=======
+
+  const [play, { stop }] = useSound(on);
+  useEffect(() => stop, []);
+
+>>>>>>> b3666db... add: sounds
   //refresh options according to level in LocalStorage
   useEffect(() => {
     options.chooseOptions(levels.level);
   }, [levels.level]);
+<<<<<<< HEAD
+=======
+
+
+  // useEffect(() => {
+  //   outcome.setHumanScore(outcome.humanScore);
+  // }, [outcome.humanScore]);
+  // useEffect(() => {
+  //   choices.setHumanChoice(choices.humanChoice);
+  // }, [choices.humanChoice]);
+
+  // useEffect(() => {
+  //   choices.setCompChoice(choices.compChoice);
+  // }, [choices.compChoice]);
+
+>>>>>>> b3666db... add: sounds
 
   return (
     <Router>
       <div className="App" >
+<<<<<<< HEAD
         <Header {...clicks}{...levels} play={play} />
 
         {levels.level &&
           <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} play={play} {...name} />}
+=======
+        <Header {...clicks} />
+
+        {levels.level &&
+          <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
+>>>>>>> b3666db... add: sounds
           />}
 
         {levels.level &&
@@ -61,12 +104,16 @@ function App() {
           <Route path="/result" render={() =>
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 
+<<<<<<< HEAD
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
         <Footer />
       </div>
     </Router>
   );
 }
+=======
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks} play={play} />} />
+>>>>>>> b3666db... add: sounds
 
 export default App;
 =======

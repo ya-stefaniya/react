@@ -4,12 +4,21 @@ import { Result } from './Result';
 import { useAction } from '../hooks/useAction';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+=======
+import useSound from 'use-sound';
+import menu from '../sounds/menu.mp3';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
+>>>>>>> b3666db... add: sounds
 
 export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore,
     outcome, setOutcome,
+<<<<<<< HEAD
     enabled, play, name }) => {
 
     const actions = useAction('no-action');
@@ -18,6 +27,13 @@ export const GameClassic = ({ level, setLevel, options,
         setCompChoice();
         setHumanChoice();
     }
+=======
+    enabled }) => {
+    //у нас есть уровень level
+
+    const [play, { stop }] = useSound(menu);
+    useEffect(() => stop, []);
+>>>>>>> b3666db... add: sounds
 
     return (
         <Router>
@@ -59,8 +75,25 @@ export const GameClassic = ({ level, setLevel, options,
                             </Route>
 
                         </div>
+<<<<<<< HEAD
                     </section>
                 </FullScreen>
+=======
+                        {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}
+                            options={options} enabled={enabled} play={play} />}
+
+                        <Route path="/result">
+                            <Result humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice}
+                                options={options} outcome={outcome} setOutcome={setOutcome}
+                                compScore={compScore} setCompScore={setCompScore}
+                                humanScore={humanScore} setHumanScore={setHumanScore} enabled={enabled}
+                                play={play}
+                            />
+                        </Route>
+
+                    </div>
+                </section>
+>>>>>>> b3666db... add: sounds
             </>
         </Router >
     )

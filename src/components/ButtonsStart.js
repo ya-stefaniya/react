@@ -5,7 +5,11 @@ import { InfoHard } from './InfoHard';
 import { useKeys } from '../hooks/useKeys';
 
 
+<<<<<<< HEAD
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play, name, handleChange }) => {
+=======
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play }) => {
+>>>>>>> b3666db... add: sounds
 
     const reload = () => {
         setCompChoice();
@@ -93,8 +97,16 @@ export const ButtonsStart = ({ level, setLevel }) => (
                 <Link to='/game-easy'>
                     <div>
                         <button className="start"
+<<<<<<< HEAD
                             onClick={() => setLevel('game-easy')}
                         >Начать</button>
+=======
+                            onClick={() => {
+                                setLevel('game-classic');
+                                chooseOptions('game-classic');
+                                if (enabled) play();
+                            }}>start</button>
+>>>>>>> b3666db... add: sounds
                     </div>
                 </Link>
             </div>
@@ -102,8 +114,17 @@ export const ButtonsStart = ({ level, setLevel }) => (
                 <Link to='/game-hard'>
                     <div>
                         <button className="start hard"
+<<<<<<< HEAD
                             onClick={() => setLevel('game-hard')}
                         >Начать</button>
+=======
+                            onClick={() => {
+                                setLevel('game-hard');
+                                chooseOptions('game-hard');
+                                if (enabled) play();
+                            }}
+                        >start</button>
+>>>>>>> b3666db... add: sounds
                     </div>
                 </Link>
                 <div className="button-icons">

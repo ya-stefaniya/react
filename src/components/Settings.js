@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { React, useEffect } from "react";
 import { useMusic } from '../hooks/useMusic';
 import { useKeys } from '../hooks/useKeys';
@@ -17,6 +18,17 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
     }
     useKeys(onKeypress);
 
+=======
+import React from "react";
+import { useMusic } from '../hooks/useMusic';
+import back from '../sounds/back.mp3';
+
+
+
+export const Settings = ({ toggleSounds, enabled }) => {
+
+    const [playing, toggle] = useMusic(back);
+>>>>>>> b3666db... add: sounds
     return (
         <div className="settings icon">
             <span onClick={() => { toggleSounds(); if (!enabled) play({ id: 'cl2' }) }}> {enabled ? '🔈' : '🔇'}</span>

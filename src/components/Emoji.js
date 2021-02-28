@@ -1,9 +1,13 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 
 
+=======
+export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
+>>>>>>> b3666db... add: sounds
 
     return (
         <span
@@ -14,7 +18,11 @@ export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
             aria-hidden={label ? "false" : "true"}
             onClick={(e) => {
                 setHumanChoice(e.target.id);
+<<<<<<< HEAD
                 if (enabled) play({ id: 'cl2' });
+=======
+                if (enabled) play();
+>>>>>>> b3666db... add: sounds
             }
             }
         >

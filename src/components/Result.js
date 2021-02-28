@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import { CompPick } from './CompPick';
 import { HumanPick } from './HumanPick';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Score } from './Score';
 
 
@@ -11,6 +12,14 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
 }) => {
 
     const [counter, setCounter] = useState(10);
+=======
+import { Link } from "react-router-dom";
+
+export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCompChoice,
+    humanScore, setHumanScore, compScore, setCompScore, outcome, setOutcome, enabled, play
+}) => {
+
+>>>>>>> b3666db... add: sounds
     //create correct object body
     const symbols = Object.values(options);
 
@@ -87,6 +96,7 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
     return (
         <>
             <div className="result">
+<<<<<<< HEAD
                 <HumanPick setHumanChoice={setHumanChoice}
                     humanChoice={humanChoice}
                     options={options}
@@ -119,6 +129,22 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                         options={options}
                         outcome={outcome}
                         counter={counter} />}
+=======
+                <HumanPick setHumanChoice={setHumanChoice} humanChoice={humanChoice} options={options} enabled={enabled} play={play} />
+                <div className="score">
+                    {compChoice &&
+                        outcome == 'win' ? <h2>Win!</h2> :
+                        outcome == 'lose' ? <h2>Lose!</h2> :
+                            outcome == 'draw' && <h2>Draw!</h2>
+                    }
+                    {compChoice && <Link to='/game-classic' onClick={() => {
+                        reload(); if (enabled) play()
+                    }}>
+                        <h3 className='again'>Again</h3></Link>}
+                </div>
+
+                <CompPick setCompChoice={setCompChoice} compChoice={compChoice} humanChoice={humanChoice} options={options} />
+>>>>>>> b3666db... add: sounds
 
 
             </div>
