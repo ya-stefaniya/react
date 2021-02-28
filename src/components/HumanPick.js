@@ -3,10 +3,13 @@ import { Emoji } from './Emoji';
 import { Link } from "react-router-dom";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome, counter }) => {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> b0c379d... fix: minor
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play }) => {
 
 >>>>>>> b3666db... add: sounds
@@ -20,6 +23,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
             {!humanChoice ? <div className={level == "game-classic" ? 'options' : 'options icons-hard'}>
                 {symbols.map((item, index) =>
                     <Link to='/result' key={index}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -40,6 +44,9 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 >>>>>>> 01b41c5... add:basic game
 =======
 >>>>>>> b3666db... add: sounds
+=======
+                    
+>>>>>>> b0c379d... fix: minor
                         <Emoji
                             key={index}
                             id={item.name}
@@ -63,6 +70,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
                         {result.symbol}
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>}
 =======
                             setHumanChoice={setHumanChoice} />
@@ -77,6 +85,9 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 =======
                 </div>
 >>>>>>> b3666db... add: sounds
+=======
+                </div>}
+>>>>>>> b0c379d... fix: minor
         </>
     )
 };
