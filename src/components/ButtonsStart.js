@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-export const ButtonsStart = ({ level, setLevel, options, chooseOptions }) => {
 
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play }) => {
 
     return (<main className="buttons-start">
         <section className='main-screen'>
@@ -18,6 +18,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions }) => {
                             onClick={() => {
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
+                                if (enabled) play();
                             }}>start</button>
                     </div>
                 </Link>
@@ -28,7 +29,8 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions }) => {
                         <button className="start hard"
                             onClick={() => {
                                 setLevel('game-hard');
-                                chooseOptions('game-hard')
+                                chooseOptions('game-hard');
+                                if (enabled) play();
                             }}
                         >start</button>
                     </div>

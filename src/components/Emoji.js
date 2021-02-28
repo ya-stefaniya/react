@@ -1,13 +1,6 @@
 import React from 'react';
-import useSound from 'use-sound';
-import { useClicks } from '../hooks/useClicks';
-import menu from '../sounds/menu.mp3';
 
-
-export const Emoji = ({ id, label, symbol, setHumanChoice }) => {
-
-    const [play] = useSound(menu);
-    const [enabled] = useClicks();
+export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 
     return (
         <span
@@ -18,7 +11,7 @@ export const Emoji = ({ id, label, symbol, setHumanChoice }) => {
             aria-hidden={label ? "false" : "true"}
             onClick={(e) => {
                 setHumanChoice(e.target.id);
-                if (id && enabled) play();
+                if (enabled) play();
             }
             }
         >

@@ -1,20 +1,13 @@
 import { React, useState, useEffect } from "react";
 import { CompPick } from './CompPick';
 import { HumanPick } from './HumanPick';
-import { useClicks } from '../hooks/useClicks';
 import { Link } from "react-router-dom";
-import useSound from 'use-sound';
-
-import click from '../sounds/click.mp3';
-
 
 export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCompChoice,
-    humanScore, setHumanScore, compScore, setCompScore, outcome, setOutcome
+    humanScore, setHumanScore, compScore, setCompScore, outcome, setOutcome, enabled, play
 }) => {
 
-    const [play] = useSound(click);
-    const [enabled] = useClicks();
-
+    //create correct object body
     const symbols = Object.values(options);
 
     const newCompPick = () => {
@@ -65,20 +58,22 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
     return (
         <>
             <div className="result">
-                <HumanPick setHumanChoice={setHumanChoice} humanChoice={humanChoice} options={options} />
+                <HumanPick setHumanChoice={setHumanChoice} humanChoice={humanChoice} options={options} enabled={enabled} play={play} />
                 <div className="score">
                     {compChoice &&
                         outcome == 'win' ? <h2>Win!</h2> :
                         outcome == 'lose' ? <h2>Lose!</h2> :
                             outcome == 'draw' && <h2>Draw!</h2>
                     }
-                    {compChoice && <Link to='/game-classic' onClick={() => reload()}>
-                        <h3 onClick={() => {
-                            if (compChoice && enabled) play();
-                        }} className='again'>Again</h3></Link>}
-
+                    {compChoice && <Link to='/game-classic' onClick={() => {
+                        reload(); if (enabled) play()
+                    }}>
+                        <h3 className='again'>Again</h3></Link>}
                 </div>
+
                 <CompPick setCompChoice={setCompChoice} compChoice={compChoice} humanChoice={humanChoice} options={options} />
+
+
             </div>
         </>
     )

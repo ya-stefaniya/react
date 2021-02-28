@@ -1,9 +1,8 @@
 import { React, useState, useEffect } from "react";
 import { HumanPick } from './HumanPick';
-import { useSound } from '../hooks/useClicks';
 import { Result } from './Result';
 
-import count from '../sounds/count.mp3';
+import useSound from 'use-sound';
 import menu from '../sounds/menu.mp3';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -12,9 +11,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore,
-    outcome, setOutcome }) => {
+    outcome, setOutcome,
+    enabled }) => {
     //у нас есть уровень level
 
+    const [play, { stop }] = useSound(menu);
+    useEffect(() => stop, []);
 
     return (
         <Router>
@@ -35,13 +37,14 @@ export const GameClassic = ({ level, setLevel, options,
 
                         </div>
                         {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}
-                            options={options} />}
+                            options={options} enabled={enabled} play={play} />}
 
                         <Route path="/result">
                             <Result humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice}
                                 options={options} outcome={outcome} setOutcome={setOutcome}
                                 compScore={compScore} setCompScore={setCompScore}
-                                humanScore={humanScore} setHumanScore={setHumanScore}
+                                humanScore={humanScore} setHumanScore={setHumanScore} enabled={enabled}
+                                play={play}
                             />
                         </Route>
 

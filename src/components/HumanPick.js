@@ -3,9 +3,9 @@ import { Emoji } from './Emoji';
 import { Link } from "react-router-dom";
 
 
-export const HumanPick = ({ humanChoice, setHumanChoice, level, options }) => {
+export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play }) => {
 
-    const symbols = Object.values(options)
+    const symbols = Object.values(options);
 
     let result = symbols.find(obj => {
         return obj.name === humanChoice;
@@ -14,13 +14,17 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options }) => {
         <>
             {!humanChoice ? <div className={level == "game-classic" ? 'options' : 'options icons-hard'}>
                 {symbols.map((item, index) =>
-                    <Link to='/result' key={index} >
+                    <Link to='/result' key={index}>
                         <Emoji
                             key={index}
                             id={item.name}
                             label={item.symbol}
                             symbol={item.symbol}
-                            setHumanChoice={setHumanChoice} />
+                            setHumanChoice={setHumanChoice}
+                            humanChoice={humanChoice}
+                            enabled={enabled}
+                            play={play}
+                        />
                     </Link>
                 )}
             </div>
@@ -29,7 +33,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options }) => {
                     <div className='answer'>
                         {result.symbol}
                     </div>
-                </div>}
+                </div>
         </>
     )
 };

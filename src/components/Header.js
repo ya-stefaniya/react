@@ -2,7 +2,7 @@ import React from "react";
 import { Settings } from './Settings'
 import { Link } from 'react-router-dom';
 
-export const Header = () => {
+export const Header = ({ toggleSounds, enabled }) => {
 
 
     return (
@@ -15,7 +15,7 @@ export const Header = () => {
                     </div>
                 </Link>
             </div>
-            <Settings />
+            <Settings toggleSounds={toggleSounds} enabled={enabled} />
         </header>
 
     );
