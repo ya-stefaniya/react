@@ -1,41 +1,50 @@
 import { React, useState, useEffect } from "react";
 import { HumanPick } from './HumanPick';
-import { useChoices } from '../hooks/useChoices';
-import { useOutcome } from '../hooks/useOutcome';
-
-import { Link } from "react-router-dom";
+import { useSound } from '../hooks/useClicks';
 import { Result } from './Result';
+
+import count from '../sounds/count.mp3';
+import menu from '../sounds/menu.mp3';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
-export const GameClassic = ({ level, options }) => {
 
-    const choices = useChoices();
-    const outcome = useOutcome();
-
+export const GameClassic = ({ level, setLevel, options,
+    humanChoice, setHumanChoice, compChoice, setCompChoice,
+    humanScore, setHumanScore, compScore, setCompScore,
+    outcome, setOutcome }) => {
     //у нас есть уровень level
+
+
     return (
         <Router>
             <>
-                <h1>{level == 'game-classic' ? 'Classic Game' : 'Speacial Mode'}</h1>
+                <h1>{level == 'game-classic' ? 'Classic Game' : 'Special Mode'}</h1>
                 <section>
                     <div className="container">
                         <div className="players">
                             <div className="result-header">
                                 <h3>You choice</h3>
-                                <span>{outcome.humanScore}</span>
+                                <span>{humanScore}</span>
                             </div>
 
                             <div className="result-header">
-                                <span>{outcome.compScore}</span>
+                                <span>{compScore}</span>
                                 <h3>Opponent</h3>
                             </div>
 
                         </div>
-                        {!choices.compChoice && <HumanPick {...choices} level={level} options={options} />}
+                        {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}
+                            options={options} />}
+
                         <Route path="/result">
-                            <Result {...choices} {...outcome} level={level} options={options} />
+                            <Result humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice}
+                                options={options} outcome={outcome} setOutcome={setOutcome}
+                                compScore={compScore} setCompScore={setCompScore}
+                                humanScore={humanScore} setHumanScore={setHumanScore}
+                            />
                         </Route>
+
                     </div>
                 </section>
             </>

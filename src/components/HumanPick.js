@@ -9,13 +9,12 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options }) => {
 
     let result = symbols.find(obj => {
         return obj.name === humanChoice;
-    })
-
+    });
     return (
         <>
-            {!humanChoice ? <div className='options'>
+            {!humanChoice ? <div className={level == "game-classic" ? 'options' : 'options icons-hard'}>
                 {symbols.map((item, index) =>
-                    <Link to='/result' key={index}>
+                    <Link to='/result' key={index} >
                         <Emoji
                             key={index}
                             id={item.name}

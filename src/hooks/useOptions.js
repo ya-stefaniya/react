@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function useOptions() {
-    const [options, setOptions] = useState(null);
-
     const threeSymbols = [
         { name: 'rock', symbol: '👊' },
         { name: 'paper', symbol: '👋' },
@@ -10,11 +8,16 @@ export function useOptions() {
     ]
     const fiveSymbols = [
         ...threeSymbols,
-        { name: 'lizzard', symbol: '🦎' },
-        { name: 'spok', symbol: '🖖' }
+        { name: 'lizard', symbol: '🦎' },
+        { name: 'spock', symbol: '🖖' }
     ]
+
+    const [options, setOptions] = useState(threeSymbols);
+
     function chooseOptions(level) {
         level == 'game-classic' ? setOptions(threeSymbols) : setOptions(fiveSymbols);
     }
+
+
     return { options, chooseOptions };
 } 
