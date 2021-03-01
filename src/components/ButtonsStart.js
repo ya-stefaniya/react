@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { InfoHard } from './InfoHard';
@@ -7,6 +8,11 @@ import { InfoHard } from './InfoHard';
 import React, { useEffect, useLayoutEffect } from "react";
 import { Link } from 'react-router-dom';
 >>>>>>> 1746332... add: keys useeffect
+=======
+import { React, useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { InfoHard } from './InfoHard';
+>>>>>>> 48043d0... add: info about hard-level
 import { useKeys } from '../hooks/useKeys';
 
 <<<<<<< HEAD
@@ -169,6 +175,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
 >>>>>>> b3666db... add: sounds
                     </div>
                 </Link>
+                <InfoHard />
                 <div className="button-icons">
                     <span>&#128074;</span>
                     <span>&#128075;</span>
@@ -176,6 +183,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                     <span>&#129422;</span>
                     <span>&#128406;</span>
                 </div>
+
             </div>
         </section>
     </main>

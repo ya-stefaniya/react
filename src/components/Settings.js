@@ -60,6 +60,11 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
 >>>>>>> 1746332... add: keys useeffect
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
             <span>&#129351;</span>
+<<<<<<< HEAD
         </div >
+=======
+            <span>&#128511;</span>
+        </div>
+>>>>>>> 48043d0... add: info about hard-level
     )
 }

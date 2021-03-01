@@ -36,6 +36,7 @@ export const GameClassic = ({ level, setLevel, options,
     enabled }) => {
 
     //у нас есть уровень level
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const [play, { stop }] = useSound(menu);
@@ -46,6 +47,8 @@ export const GameClassic = ({ level, setLevel, options,
 
 
 =======
+=======
+>>>>>>> 48043d0... add: info about hard-level
     const { play } = useClicks(menu);
 >>>>>>> 2262b8f... add: keys control of level
 

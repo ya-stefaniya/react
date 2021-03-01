@@ -703,7 +703,6 @@ header {
         .start-hard {
             .button-icons {
                 position: relative;
-
                 &::before {
                     content: 'Только на тру фэнс Теории Большого Взрыва!';
                     position: absolute;
@@ -719,6 +718,55 @@ header {
                     border-top: 5px solid #da513d;
                     border-bottom: 5px solid #ddd;
 >>>>>>> 01b41c5... add:basic game
+                }
+            }
+            .info-hard{
+                span{
+                    position: relative;
+                    border-radius: 50%;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    background-color: #e8cd9069;
+                    padding: 1rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    color: #526060;
+                    position: absolute;
+                    top: -4rem;
+                    right: -4rem;
+                    z-index: 2;
+                    animation: spinning 5s linear infinite;
+                    @keyframes spinning {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.2);
+                        animation: stop;
+                    }
+                }   
+                .info{
+                    opacity: 0;
+                    width: 15rem;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    color: black;
+                    background: white;
+                    text-align: justify;
+                    position: absolute;
+                    border: 1px solid #da513d;
+                    right: -2rem;
+                    padding: 1rem;
+                    z-index: 3;
+                    top: -2rem;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+                    a{
+                        color: black;
+                    }
                 }
             }
         }
