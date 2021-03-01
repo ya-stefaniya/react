@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { InfoHard } from './InfoHard';
 import { useKeys } from '../hooks/useKeys';
 
+
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play }) => {
 
     const reload = () => {
@@ -57,7 +58,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                         >start</button>
                     </div>
                 </Link>
-                <InfoHard />
+                <InfoHard onClick={() => { if (enabled) play(); }} />
                 <div className="button-icons">
                     <span>&#128074;</span>
                     <span>&#128075;</span>

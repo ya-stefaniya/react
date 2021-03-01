@@ -40,15 +40,16 @@ function App() {
         <Header {...clicks} {...levels} />
 
         {levels.level &&
-          <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
+          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
           />}
 
         {levels.level &&
-          <Route path='/game-hard' render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} />}
+          <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} />}
           />}
 
-        {!choices.humanChoice ? <Redirect to={levels.level} /> : <Route path="/result" render={() =>
-          <Result {...choices} {...outcome} {...levels} {...options} />} />}
+        {!choices.humanChoice ? <Redirect to={levels.level} /> :
+          <Route path="/result" render={() =>
+            <Result {...choices} {...outcome} {...levels} {...options} />} />}
 
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} />} />
 

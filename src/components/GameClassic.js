@@ -4,7 +4,7 @@ import { Result } from './Result';
 import { useClicks } from '../hooks/useClicks';
 
 import menu from '../sounds/menu.mp3';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 
@@ -16,11 +16,23 @@ export const GameClassic = ({ level, setLevel, options,
 
     //у нас есть уровень level
     const { play } = useClicks(menu);
-
+    const reload = () => {
+        setCompChoice();
+        setHumanChoice();
+    }
     return (
         <Router>
             <>
                 <h1>{level == 'game-classic' ? 'Classic Game' : 'Special Mode'}</h1>
+
+                <Link to='/'>
+                    <button className='back' onClick={() => {
+                        if (enabled) play();
+                        if (compChoice) reload();
+                        { level == 'game-classic' ? setLevel('game-hard') : setLevel('game-classic') }
+                    }}>
+                        change level</button>
+                </Link>
                 <section>
                     <div className="container">
                         <div className="players">
