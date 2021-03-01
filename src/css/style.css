@@ -221,9 +221,14 @@ header .icon {
   position: absolute;
   text-align: center;
   padding: 1rem;
+<<<<<<< HEAD
   width: auto;
   min-width: 14rem;
   height: 10rem;
+=======
+  width: 13rem;
+  height: 9rem;
+>>>>>>> 0bf1a78... add: change-level button
   bottom: 12rem;
 =======
 .score {
@@ -488,6 +493,7 @@ header .icon {
   font-style: italic;
 }
 
+<<<<<<< HEAD
 .paper {
   background: url("../images/hand-paper2.png") no-repeat center;
   background-size: 85%;
@@ -534,6 +540,35 @@ header .icon {
   -webkit-transform: translate3d(0, 1in, 0);
           transform: translate3d(0, 1in, 0);
 >>>>>>> 01b41c5... add:basic game
+=======
+.back {
+  width: 9rem;
+  height: 3.2rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  -webkit-box-shadow: 0 7px 9px rgba(147, 153, 150, 0.4);
+          box-shadow: 0 7px 9px rgba(147, 153, 150, 0.4);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: 6;
+  left: 3rem;
+}
+
+.back:hover {
+  background-color: #f3b543c7;
+  -webkit-box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
+          box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
+  color: #fff;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+>>>>>>> 0bf1a78... add: change-level button
 }
 
 .buttons-start .main-screen {
@@ -649,6 +684,7 @@ header .icon {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+<<<<<<< HEAD
 }
 
 .buttons-start .main-screen .start-options .start:hover {
@@ -694,12 +730,17 @@ header .icon {
   color: white;
   -webkit-transition: .15s ease-in-out;
   transition: .15s ease-in-out;
+=======
+>>>>>>> 0bf1a78... add: change-level button
 }
 
 .buttons-start .main-screen .start:hover {
-  -webkit-box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
-          box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
-  color: #e5b976;
+  background-color: #f3b543c7;
+  -webkit-box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
+          box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
+  color: #fff;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
 }
 
 .buttons-start .main-screen .start.hard:hover {
@@ -897,6 +938,7 @@ header .icon {
   top: -2rem;
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  line-height: 1.1rem;
 }
 
 .buttons-start .main-screen .start-hard .info-hard .info a {
@@ -936,6 +978,12 @@ header .icon {
     font-size: 10px;
     left: 3rem;
     top: 7rem;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  header .settings.icon {
+    font-size: 2.2rem;
   }
 }
 

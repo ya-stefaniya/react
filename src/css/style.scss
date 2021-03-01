@@ -258,9 +258,14 @@ header {
     position: absolute;
     text-align: center;
     padding: 1rem;
+<<<<<<< HEAD
     width: auto;
     min-width: 14rem;
     height: 10rem;
+=======
+    width: 13rem;
+    height: 9rem;
+>>>>>>> 0bf1a78... add: change-level button
     bottom: 12rem;
     display: flex;
     flex-direction: column;
@@ -353,6 +358,9 @@ header {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0bf1a78... add: change-level button
 .back{
     width: 9rem;
     height: 3.2rem;
@@ -367,6 +375,10 @@ header {
     cursor: pointer;
     outline: none;
     position: absolute;
+<<<<<<< HEAD
+=======
+    left: 6;
+>>>>>>> 0bf1a78... add: change-level button
     left: 3rem;
     &:hover {
         background-color:#f3b543c7;
@@ -375,6 +387,7 @@ header {
         transform: translateY(7px);
     }
 }
+<<<<<<< HEAD
 =======
 
 .paper {
@@ -411,6 +424,8 @@ header {
 
 
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> 0bf1a78... add: change-level button
 .buttons-start {
     .main-screen {
         display: flex;
@@ -676,6 +691,7 @@ header {
             display: inline-block;
             padding: 2rem 3rem;
             margin: 1rem 5rem;
+<<<<<<< HEAD
             border-color: rgba(196, 187, 187, 0.411);
             border-radius: 22px;
             box-shadow: 0 0 40px 40px #e5b976 inset,
@@ -686,12 +702,24 @@ header {
             letter-spacing: 2px;
             color: white;
             transition: .15s ease-in-out;
+=======
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0 5px 10px  rgba(147, 153, 150, 0.4);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+>>>>>>> 0bf1a78... add: change-level button
 
             &:hover {
-                box-shadow: 0 0 10px 0 #e5b976 inset, 0 0 10px 4px #e5b976;
-                color: #e5b976;
+                background-color:#f3b543c7;
+                box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
+                color: #fff;
+                transform: translateY(7px);
             }
-
             &.hard:hover {
                 background-image: url('../images/bbth.png');
                 background-repeat: no-repeat;
@@ -764,6 +792,7 @@ header {
                     z-index: 3;
                     top: -2rem;
                     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+                    line-height: 1.1rem;
                     a{
                         color: black;
                     }
@@ -771,6 +800,7 @@ header {
             }
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     .human-choice,
     .comp-choice{
@@ -780,6 +810,26 @@ header {
     } 
     .score{
         bottom:0;
+=======
+}
+@media screen and (max-width: 1200px){
+    .buttons-start{
+        .main-screen{
+            .start-hard{
+                position: relative;
+                .button-icons{
+                    position: unset;
+                    &::before  {
+                    left: 7rem;
+                    top: 6rem;
+                    }
+                }     
+            }
+        }
+    }
+    .score{
+        bottom:7rem;
+>>>>>>> 0bf1a78... add: change-level button
     }
     .buttons-start{
         .main-screen{
@@ -788,10 +838,32 @@ header {
             }
         }
     }
+<<<<<<< HEAD
     .start-hard {
         .info-hard{
             top: 0rem;
             right: -6rem;
+=======
+}
+@media screen and (max-width: 585px){
+    header{
+        .settings.icon{
+            font-size: 2.2rem;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    :root{
+    font-size: 10px;
+    }
+    .container{
+        margin: 0 5rem;
+    }
+    .human-choice,
+    .comp-choice{
+        .answer{
+        font-size: 8rem;
+>>>>>>> 0bf1a78... add: change-level button
         }
     }
 }

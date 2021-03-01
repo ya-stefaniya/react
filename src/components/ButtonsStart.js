@@ -16,6 +16,7 @@ import { InfoHard } from './InfoHard';
 import { useKeys } from '../hooks/useKeys';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,9 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
     humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
 =======
+=======
+
+>>>>>>> 0bf1a78... add: change-level button
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play }) => {
 >>>>>>> 2262b8f... add: keys control of level
 
@@ -175,7 +179,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
 >>>>>>> b3666db... add: sounds
                     </div>
                 </Link>
-                <InfoHard />
+                <InfoHard onClick={() => { if (enabled) play(); }} />
                 <div className="button-icons">
                     <span>&#128074;</span>
                     <span>&#128075;</span>

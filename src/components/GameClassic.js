@@ -14,7 +14,7 @@ import { useClicks } from '../hooks/useClicks';
 
 >>>>>>> 2262b8f... add: keys control of level
 import menu from '../sounds/menu.mp3';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 >>>>>>> b3666db... add: sounds
@@ -50,6 +50,7 @@ export const GameClassic = ({ level, setLevel, options,
 =======
 >>>>>>> 48043d0... add: info about hard-level
     const { play } = useClicks(menu);
+<<<<<<< HEAD
 >>>>>>> 2262b8f... add: keys control of level
 
     return (
@@ -78,6 +79,32 @@ export const GameClassic = ({ level, setLevel, options,
                                     <span>{compScore}</span>
                                     <h3>Opponent</h3>
                                 </div>
+=======
+    const reload = () => {
+        setCompChoice();
+        setHumanChoice();
+    }
+    return (
+        <Router>
+            <>
+                <h1>{level == 'game-classic' ? 'Classic Game' : 'Special Mode'}</h1>
+
+                <Link to='/'>
+                    <button className='back' onClick={() => {
+                        if (enabled) play();
+                        if (compChoice) reload();
+                        { level == 'game-classic' ? setLevel('game-hard') : setLevel('game-classic') }
+                    }}>
+                        change level</button>
+                </Link>
+                <section>
+                    <div className="container">
+                        <div className="players">
+                            <div className="result-header">
+                                <h3>You choice</h3>
+                                <span>{humanScore}</span>
+                            </div>
+>>>>>>> 0bf1a78... add: change-level button
 
                             </div>
                             {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}

@@ -119,17 +119,29 @@ function App() {
 >>>>>>> 2262b8f... add: keys control of level
 
         {levels.level &&
+<<<<<<< HEAD
           <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
 >>>>>>> b3666db... add: sounds
           />}
 
         {levels.level &&
           <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} {...clicks} play={play} {...name} />}
+=======
+          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
+          />}
+
+        {levels.level &&
+          <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} />}
+>>>>>>> 0bf1a78... add: change-level button
           />}
 
         {!choices.humanChoice ? <Redirect to={levels.level} /> :
           <Route path="/result" render={() =>
+<<<<<<< HEAD
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
+=======
+            <Result {...choices} {...outcome} {...levels} {...options} />} />}
+>>>>>>> 0bf1a78... add: change-level button
 
 <<<<<<< HEAD
 <<<<<<< HEAD
