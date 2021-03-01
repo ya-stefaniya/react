@@ -2,9 +2,11 @@ import React from 'react';
 
 export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 
+
+
     return (
         <span
-            className="emoji"
+            className='emoji'
             role="img"
             id={id}
             aria-label={label ? label : ""}

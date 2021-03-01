@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import { Emoji } from './Emoji';
 import { Link } from "react-router-dom";
 
-export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play }) => {
+export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome }) => {
 
     const symbols = Object.values(options);
 
@@ -14,7 +14,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
             {!humanChoice ? <div className={level == "game-classic" ? 'options' : 'options icons-hard'}>
                 {symbols.map((item, index) =>
                     <Link to='/result' key={index}>
-                    
+
                         <Emoji
                             key={index}
                             id={item.name}
@@ -28,7 +28,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
                     </Link>
                 )}
             </div>
-                : <div className="human-choice here" >
+                : <div className={`human-choice ${outcome == 'win' ? 'winner' : ''}`} >
                     <span>{humanChoice}</span>
                     <div className='answer'>
                         {result.symbol}

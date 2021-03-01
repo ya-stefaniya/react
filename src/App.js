@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
-// import { Animated } from 'react-animated-css'
-// console.log('Animated: ', Animated);
+//
 
 
 import { Header } from "./components/Header";
@@ -54,7 +53,7 @@ function App() {
   return (
     <Router>
       <div className="App" >
-        <Header {...clicks} />
+        <Header {...clicks} {...levels} />
 
         {levels.level &&
           <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
@@ -67,7 +66,7 @@ function App() {
         {!choices.humanChoice ? <Redirect to={levels.level} /> : <Route path="/result" render={() =>
           <Result {...choices} {...outcome} {...levels} {...options} />} />}
 
-        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks} play={play} />} />
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
 
       </div>
     </Router>

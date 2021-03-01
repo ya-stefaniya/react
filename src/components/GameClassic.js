@@ -13,10 +13,15 @@ export const GameClassic = ({ level, setLevel, options,
     humanScore, setHumanScore, compScore, setCompScore,
     outcome, setOutcome,
     enabled }) => {
+
     //у нас есть уровень level
 
     const [play, { stop }] = useSound(menu);
     useEffect(() => stop, []);
+
+
+
+
 
     return (
         <Router>

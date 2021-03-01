@@ -2,7 +2,14 @@ import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 
-export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play }) => {
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
+    humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
+
+const reload = () => {
+        setCompChoice();
+        setHumanChoice();
+        //setOutcome();
+    }
 
     return (<main className="buttons-start">
         <section className='main-screen'>
@@ -19,6 +26,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
                                 if (enabled) play();
+                                if(compChoice) reload();
                             }}>start</button>
                     </div>
                 </Link>
@@ -31,6 +39,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                                 setLevel('game-hard');
                                 chooseOptions('game-hard');
                                 if (enabled) play();
+                                 if(compChoice) reload();
                             }}
                         >start</button>
                     </div>

@@ -54,11 +54,16 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
     useEffect(() => {
         round();
     }, [compChoice]);
-
     return (
         <>
             <div className="result">
-                <HumanPick setHumanChoice={setHumanChoice} humanChoice={humanChoice} options={options} enabled={enabled} play={play} />
+                <HumanPick setHumanChoice={setHumanChoice}
+                            humanChoice={humanChoice}
+                            options={options}
+                            enabled={enabled}
+                            play={play}
+                            outcome={outcome} />
+
                 <div className="score">
                     {compChoice &&
                         outcome == 'win' ? <h2>Win!</h2> :
@@ -71,7 +76,11 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                         <h3 className='again'>Again</h3></Link>}
                 </div>
 
-                <CompPick setCompChoice={setCompChoice} compChoice={compChoice} humanChoice={humanChoice} options={options} />
+                <CompPick setCompChoice={setCompChoice}
+                        compChoice={compChoice}
+                        humanChoice={humanChoice}
+                        options={options}
+                        outcome={outcome} />
 
 
             </div>

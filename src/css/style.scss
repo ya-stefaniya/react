@@ -5,10 +5,10 @@
     padding: 0.5rem 1rem;
 }
 
-@mixin card($transform) {
+@mixin card() {
     display: flex;
     flex-direction: column;
-    transform: $transform;
+   // transform: $transform;
 }
 
 @mixin caption() {
@@ -17,7 +17,20 @@
     text-align: center;
     font-style: italic;
 }
-
+@mixin cardAnimation($color){
+    box-shadow: 1px 2px 17px 12px $color;
+    animation: rotate-after 3s 0.1s linear infinite;
+        @keyframes rotate-after {
+        0% {transform: scaleX(1) scaleY(1);}
+        50% {transform:  scaleX(0.82) scaleY(0.95);}
+        100% {transform:  scaleX(1) scaleY(1);}
+    }
+    @keyframes rotate-before {
+        0% {transform:  scaleX(1) scaleY(1);}
+        50% {transform:  scaleX(0.95) scaleY(0.85);}
+        100% {transform:  scaleX(1) scaleY(1);}
+    }
+}
 html {
     box-sizing: border-box;
     overflow: hidden;
@@ -141,7 +154,6 @@ header {
 
 }
 
-
 .score{
     position: absolute;
     border: 3px solid #a59999;
@@ -168,17 +180,22 @@ header {
 
 
 .human-choice{
-    @include answer(#ddbf8a)
+    @include answer(#ddbf8a);
+    &.winner {
+        @include cardAnimation(#ddbf8a);
+    }
 }
 .comp-choice{
-    @include answer(#afcad4)
+    @include answer(#afcad4);
+    &.winner {
+        @include cardAnimation(#afcad4);
+    }
 }
 
 //картинки-карты игровые
 .human-choice,
 .comp-choice {
-    @include card(translateY(1rem));
-
+    @include card();
     span {
         @include caption();
     }
