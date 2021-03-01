@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { HumanPick } from './HumanPick';
 import { Result } from './Result';
+<<<<<<< HEAD
 import { useAction } from '../hooks/useAction';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
@@ -8,6 +9,10 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 =======
 import useSound from 'use-sound';
+=======
+import { useClicks } from '../hooks/useClicks';
+
+>>>>>>> 2262b8f... add: keys control of level
 import menu from '../sounds/menu.mp3';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -32,6 +37,7 @@ export const GameClassic = ({ level, setLevel, options,
 
     //у нас есть уровень level
 
+<<<<<<< HEAD
     const [play, { stop }] = useSound(menu);
     useEffect(() => stop, []);
 >>>>>>> b3666db... add: sounds
@@ -39,6 +45,9 @@ export const GameClassic = ({ level, setLevel, options,
 
 
 
+=======
+    const { play } = useClicks(menu);
+>>>>>>> 2262b8f... add: keys control of level
 
     return (
         <Router>

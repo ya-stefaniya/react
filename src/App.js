@@ -14,14 +14,21 @@ import sprite from './sounds/sprite.mp3';
 //
 >>>>>>> d123f5b... add: mute from keys
 
+<<<<<<< HEAD
 >>>>>>> b3666db... add: sounds
 
+=======
+>>>>>>> 2262b8f... add: keys control of level
 import { Header } from "./components/Header";
 import { ButtonsStart } from "./components/ButtonsStart";
 import { GameClassic } from "./components/GameClassic"
 import { Result } from "./components/Result"
+<<<<<<< HEAD
 import { Footer } from "./components/Footer"
 
+=======
+import click from './sounds/click.mp3';
+>>>>>>> 2262b8f... add: keys control of level
 
 //hooks
 import { useLevel } from './hooks/useLevel';
@@ -33,8 +40,7 @@ import { useClicks } from './hooks/useClicks';
 import { useName } from './hooks/useName';
 =======
 
-import useSound from 'use-sound';
-import on from './sounds/click.mp3';
+
 
 >>>>>>> b3666db... add: sounds
 
@@ -46,6 +52,7 @@ function App() {
   const options = useOptions();
   const choices = useChoices();
   const outcome = useOutcome();
+<<<<<<< HEAD
   const clicks = useClicks();
 <<<<<<< HEAD
   const name = useName('Your name');
@@ -58,9 +65,10 @@ function App() {
   });
 
 =======
+=======
+  const clicks = useClicks(click);
+>>>>>>> 2262b8f... add: keys control of level
 
-  const [play, { stop }] = useSound(on);
-  useEffect(() => stop, []);
 
 >>>>>>> b3666db... add: sounds
   //refresh options according to level in LocalStorage
@@ -70,6 +78,7 @@ function App() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
   // useEffect(() => {
   //   outcome.setHumanScore(outcome.humanScore);
@@ -102,6 +111,12 @@ function App() {
 =======
         <Header {...clicks} {...levels} play={play} />
 >>>>>>> 1746332... add: keys useeffect
+=======
+  return (
+    <Router>
+      <div className="App" >
+        <Header {...clicks} {...levels} />
+>>>>>>> 2262b8f... add: keys control of level
 
         {levels.level &&
           <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
@@ -116,6 +131,7 @@ function App() {
           <Route path="/result" render={() =>
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
@@ -146,6 +162,9 @@ import { GameHard } from "./components/GameHard"
 =======
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
 >>>>>>> d123f5b... add: mute from keys
+=======
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} />} />
+>>>>>>> 2262b8f... add: keys control of level
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 >>>>>>> 01b41c5... add:basic game

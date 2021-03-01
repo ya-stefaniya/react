@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 >>>>>>> 1746332... add: keys useeffect
 import { useKeys } from '../hooks/useKeys';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,9 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
 =======
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
     humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
+=======
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play }) => {
+>>>>>>> 2262b8f... add: keys control of level
 
     const reload = () => {
         setCompChoice();
@@ -102,13 +106,21 @@ import { Link } from 'react-router-dom';
 
 export const ButtonsStart = ({ level, setLevel }) => (
 
+<<<<<<< HEAD
     <main className="buttons-start">
 =======
+=======
+    //key control of the level
+>>>>>>> 2262b8f... add: keys control of level
     const onKeypress = e => {
-        if (e.code === 'KeyC')
+        if (e.code === 'KeyC') {
+            setLevel('');
             setLevel('game-classic');
-        if (e.code === 'KeyH')
+        }
+        else if (e.code === 'KeyH') {
+            setLevel('');
             setLevel('game-hard');
+        }
     }
     useKeys(onKeypress);
 
