@@ -22,7 +22,8 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
         <div className="settings icon">
             <span onClick={() => { toggleSounds(); if (!enabled) play() }}> {enabled ? '🔈' : '🔇'}</span>
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
-            <span>🔝</span>
+            <span>&#129351;</span>
+            <span>&#128511;</span>
         </div>
     )
 }

@@ -1,5 +1,6 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import { InfoHard } from './InfoHard';
 import { useKeys } from '../hooks/useKeys';
 
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play }) => {
@@ -56,6 +57,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                         >start</button>
                     </div>
                 </Link>
+                <InfoHard />
                 <div className="button-icons">
                     <span>&#128074;</span>
                     <span>&#128075;</span>
@@ -63,6 +65,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                     <span>&#129422;</span>
                     <span>&#128406;</span>
                 </div>
+
             </div>
         </section>
     </main>)

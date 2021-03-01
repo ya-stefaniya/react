@@ -15,7 +15,6 @@ export const GameClassic = ({ level, setLevel, options,
     enabled }) => {
 
     //у нас есть уровень level
-
     const { play } = useClicks(menu);
 
     return (

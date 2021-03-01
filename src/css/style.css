@@ -430,6 +430,75 @@ header .icon {
   border-bottom: 5px solid #ddd;
 }
 
+.buttons-start .main-screen .start-hard .info-hard span {
+  position: relative;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #e8cd9069;
+  padding: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #526060;
+  position: absolute;
+  top: -4rem;
+  right: -4rem;
+  z-index: 2;
+  -webkit-animation: spinning 5s linear infinite;
+          animation: spinning 5s linear infinite;
+}
+
+@-webkit-keyframes spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.buttons-start .main-screen .start-hard .info-hard span:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation: stop;
+          animation: stop;
+}
+
+.buttons-start .main-screen .start-hard .info-hard .info {
+  opacity: 0;
+  width: 15rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
+  background: white;
+  text-align: justify;
+  position: absolute;
+  border: 1px solid #da513d;
+  right: -2rem;
+  padding: 1rem;
+  z-index: 3;
+  top: -2rem;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-start .main-screen .start-hard .info-hard .info a {
+  color: black;
+}
+
 @media screen and (max-width: 1200px) {
   .buttons-start .main-screen .start-hard {
     position: relative;
