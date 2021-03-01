@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const Header = ({ toggleSounds, enabled, play }) => {
     return (
         <>
@@ -44,6 +45,9 @@ export const Header = ({ toggleSounds, enabled }) => {
 >>>>>>> b3666db... add: sounds
 =======
 export const Header = ({ toggleSounds, enabled, setCompChoice, setHumanChoice, compChoice }) => {
+=======
+export const Header = ({ toggleSounds, enabled, play }) => {
+>>>>>>> 1746332... add: keys useeffect
 
     return (
         <>
@@ -56,7 +60,9 @@ export const Header = ({ toggleSounds, enabled, setCompChoice, setHumanChoice, c
                         </div>
                     </Link>
                 </div>
-                <Settings toggleSounds={toggleSounds} enabled={enabled} />
+                <Settings toggleSounds={toggleSounds}
+                    enabled={enabled}
+                    play={play} />
             </header>
         </>
 >>>>>>> d123f5b... add: mute from keys

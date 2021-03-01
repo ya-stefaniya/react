@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { InfoHard } from './InfoHard';
+=======
+import React, { useEffect, useLayoutEffect } from "react";
+import { Link } from 'react-router-dom';
+>>>>>>> 1746332... add: keys useeffect
 import { useKeys } from '../hooks/useKeys';
 
 
@@ -15,13 +20,13 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
     humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
 
-const reload = () => {
+    const reload = () => {
         setCompChoice();
         setHumanChoice();
-        //setOutcome();
     }
 >>>>>>> d123f5b... add: mute from keys
 
+<<<<<<< HEAD
     const reload = () => {
         setCompChoice();
         setHumanChoice();
@@ -98,6 +103,18 @@ import { Link } from 'react-router-dom';
 export const ButtonsStart = ({ level, setLevel }) => (
 
     <main className="buttons-start">
+=======
+    const onKeypress = e => {
+        if (e.code === 'KeyC')
+            setLevel('game-classic');
+        if (e.code === 'KeyH')
+            setLevel('game-hard');
+    }
+    useKeys(onKeypress);
+
+
+    return (<main className="buttons-start">
+>>>>>>> 1746332... add: keys useeffect
         <section className='main-screen'>
             <div className="start-easy">
                 <div className="button-icons">
@@ -116,7 +133,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
                                 if (enabled) play();
-                                if(compChoice) reload();
+                                if (compChoice) reload();
                             }}>start</button>
 >>>>>>> b3666db... add: sounds
                     </div>
@@ -134,7 +151,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                                 setLevel('game-hard');
                                 chooseOptions('game-hard');
                                 if (enabled) play();
-                                 if(compChoice) reload();
+                                if (compChoice) reload();
                             }}
                         >start</button>
 >>>>>>> b3666db... add: sounds

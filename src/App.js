@@ -89,6 +89,7 @@ function App() {
       <div className="App" >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Header {...clicks}{...levels} play={play} />
 
         {levels.level &&
@@ -98,6 +99,9 @@ function App() {
 =======
         <Header {...clicks} {...levels} />
 >>>>>>> d123f5b... add: mute from keys
+=======
+        <Header {...clicks} {...levels} play={play} />
+>>>>>>> 1746332... add: keys useeffect
 
         {levels.level &&
           <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}

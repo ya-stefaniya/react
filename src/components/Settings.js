@@ -4,6 +4,7 @@ import { React, useEffect } from "react";
 import { useMusic } from '../hooks/useMusic';
 import { useKeys } from '../hooks/useKeys';
 
+<<<<<<< HEAD
 import back from '../sounds/back.mp3';
 
 export const Settings = ({ toggleSounds, enabled, play }) => {
@@ -25,33 +26,38 @@ import React from "react";
 import { React, useEffect } from "react";
 >>>>>>> d123f5b... add: mute from keys
 import { useMusic } from '../hooks/useMusic';
+=======
+>>>>>>> 1746332... add: keys useeffect
 import back from '../sounds/back.mp3';
 
 
 
-export const Settings = ({ toggleSounds, enabled }) => {
+export const Settings = ({ toggleSounds, enabled, play }) => {
 
     const [playing, toggle] = useMusic(back);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b3666db... add: sounds
 =======
+=======
+
+>>>>>>> 1746332... add: keys useeffect
     const onKeypress = e => {
         if (e.code === 'KeyM')
             toggle();
         if (e.code === 'KeyS')
             toggleSounds();
     }
-    useEffect(() => {
-        document.addEventListener('keypress', onKeypress);
-        return () => {
-            document.removeEventListener('keypress', onKeypress);
-        };
-    }, [onKeypress]);
+    useKeys(onKeypress);
 
 >>>>>>> d123f5b... add: mute from keys
     return (
         <div className="settings icon">
+<<<<<<< HEAD
             <span onClick={() => { toggleSounds(); if (!enabled) play({ id: 'cl2' }) }}> {enabled ? '🔈' : '🔇'}</span>
+=======
+            <span onClick={() => { toggleSounds(); if (!enabled) play() }}> {enabled ? '🔈' : '🔇'}</span>
+>>>>>>> 1746332... add: keys useeffect
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
             <span>&#129351;</span>
         </div >
