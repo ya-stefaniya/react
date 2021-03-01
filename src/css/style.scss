@@ -7,6 +7,7 @@
 }
 
 @mixin card() {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
    // transform: $transform;
@@ -25,6 +26,11 @@
     flex-direction: column;
     transform: $transform;
 >>>>>>> 01b41c5... add:basic game
+=======
+    display: flex;
+    flex-direction: column;
+   // transform: $transform;
+>>>>>>> d123f5b... add: mute from keys
 }
 
 @mixin caption() {
@@ -52,8 +58,25 @@
     margin-bottom: 1rem;
     font-style: italic;
 }
+<<<<<<< HEAD
 
 >>>>>>> 01b41c5... add:basic game
+=======
+@mixin cardAnimation($color){
+    box-shadow: 1px 2px 17px 12px $color;
+    animation: rotate-after 3s 0.1s linear infinite;
+        @keyframes rotate-after {
+        0% {transform: scaleX(1) scaleY(1);}
+        50% {transform:  scaleX(0.82) scaleY(0.95);}
+        100% {transform:  scaleX(1) scaleY(1);}
+    }
+    @keyframes rotate-before {
+        0% {transform:  scaleX(1) scaleY(1);}
+        50% {transform:  scaleX(0.95) scaleY(0.85);}
+        100% {transform:  scaleX(1) scaleY(1);}
+    }
+}
+>>>>>>> d123f5b... add: mute from keys
 html {
     box-sizing: border-box;
     overflow: hidden;
@@ -228,6 +251,9 @@ header {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d123f5b... add: mute from keys
 .score{
     position: absolute;
     text-align: center;
@@ -282,6 +308,7 @@ header {
     &.winner {
         @include cardAnimation(#afcad4);
     }
+<<<<<<< HEAD
 }
 .full-screen{
     position: absolute;
@@ -291,12 +318,15 @@ header {
     color: #b0c9d2;
     box-shadow: 1px 2px 3px #c8c3c3;
     cursor: pointer;
+=======
+>>>>>>> d123f5b... add: mute from keys
 }
 
 //картинки-карты игровые
 .human-choice,
 .comp-choice {
     @include card();
+<<<<<<< HEAD
 =======
 .score {
     display: flex;
@@ -315,6 +345,8 @@ header {
     @include card(translateY(1rem));
 
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> d123f5b... add: mute from keys
     span {
         @include caption();
     }

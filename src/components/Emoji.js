@@ -5,9 +5,12 @@ import React from 'react';
 export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 
 
+<<<<<<< HEAD
 =======
 export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
 >>>>>>> b3666db... add: sounds
+=======
+>>>>>>> d123f5b... add: mute from keys
 
     return (
         <span

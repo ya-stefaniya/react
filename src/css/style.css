@@ -296,8 +296,13 @@ header .icon {
             transform: scaleX(1) scaleY(1);
   }
   50% {
+<<<<<<< HEAD
     -webkit-transform: scaleX(1.1) scaleY(1.1);
             transform: scaleX(1.1) scaleY(1.1);
+=======
+    -webkit-transform: scaleX(0.82) scaleY(0.95);
+            transform: scaleX(0.82) scaleY(0.95);
+>>>>>>> d123f5b... add: mute from keys
   }
   100% {
     -webkit-transform: scaleX(1) scaleY(1);
@@ -311,8 +316,13 @@ header .icon {
             transform: scaleX(1) scaleY(1);
   }
   50% {
+<<<<<<< HEAD
     -webkit-transform: scaleX(1.1) scaleY(1.1);
             transform: scaleX(1.1) scaleY(1.1);
+=======
+    -webkit-transform: scaleX(0.82) scaleY(0.95);
+            transform: scaleX(0.82) scaleY(0.95);
+>>>>>>> d123f5b... add: mute from keys
   }
   100% {
     -webkit-transform: scaleX(1) scaleY(1);
@@ -370,8 +380,13 @@ header .icon {
             transform: scaleX(1) scaleY(1);
   }
   50% {
+<<<<<<< HEAD
     -webkit-transform: scaleX(1.1) scaleY(1.1);
             transform: scaleX(1.1) scaleY(1.1);
+=======
+    -webkit-transform: scaleX(0.82) scaleY(0.95);
+            transform: scaleX(0.82) scaleY(0.95);
+>>>>>>> d123f5b... add: mute from keys
   }
   100% {
     -webkit-transform: scaleX(1) scaleY(1);
@@ -394,6 +409,7 @@ header .icon {
   }
 }
 
+<<<<<<< HEAD
 .full-screen {
   position: absolute;
   font-size: 2rem;
@@ -411,6 +427,8 @@ header .icon {
 >>>>>>> 01b41c5... add:basic game
 }
 
+=======
+>>>>>>> d123f5b... add: mute from keys
 .human-choice,
 .comp-choice {
   display: -webkit-box;
@@ -421,10 +439,13 @@ header .icon {
       -ms-flex-direction: column;
           flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> d123f5b... add: mute from keys
 }
 
 .human-choice span,

@@ -29,11 +29,16 @@ export const GameClassic = ({ level, setLevel, options,
     }
 =======
     enabled }) => {
+
     //у нас есть уровень level
 
     const [play, { stop }] = useSound(menu);
     useEffect(() => stop, []);
 >>>>>>> b3666db... add: sounds
+
+
+
+
 
     return (
         <Router>

@@ -6,10 +6,21 @@ import { useKeys } from '../hooks/useKeys';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play, name, handleChange }) => {
 =======
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play }) => {
 >>>>>>> b3666db... add: sounds
+=======
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
+    humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
+
+const reload = () => {
+        setCompChoice();
+        setHumanChoice();
+        //setOutcome();
+    }
+>>>>>>> d123f5b... add: mute from keys
 
     const reload = () => {
         setCompChoice();
@@ -105,6 +116,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
                                 if (enabled) play();
+                                if(compChoice) reload();
                             }}>start</button>
 >>>>>>> b3666db... add: sounds
                     </div>
@@ -122,6 +134,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                                 setLevel('game-hard');
                                 chooseOptions('game-hard');
                                 if (enabled) play();
+                                 if(compChoice) reload();
                             }}
                         >start</button>
 >>>>>>> b3666db... add: sounds

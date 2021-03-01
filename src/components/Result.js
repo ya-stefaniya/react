@@ -81,6 +81,7 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
         }
     };
     useEffect(() => {
+<<<<<<< HEAD
         const timer =
             counter > 0
                 ? setInterval(() => {
@@ -131,6 +132,20 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                         counter={counter} />}
 =======
                 <HumanPick setHumanChoice={setHumanChoice} humanChoice={humanChoice} options={options} enabled={enabled} play={play} />
+=======
+        round();
+    }, [compChoice]);
+    return (
+        <>
+            <div className="result">
+                <HumanPick setHumanChoice={setHumanChoice}
+                            humanChoice={humanChoice}
+                            options={options}
+                            enabled={enabled}
+                            play={play}
+                            outcome={outcome} />
+
+>>>>>>> d123f5b... add: mute from keys
                 <div className="score">
                     {compChoice &&
                         outcome == 'win' ? <h2>Win!</h2> :
@@ -143,8 +158,16 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                         <h3 className='again'>Again</h3></Link>}
                 </div>
 
+<<<<<<< HEAD
                 <CompPick setCompChoice={setCompChoice} compChoice={compChoice} humanChoice={humanChoice} options={options} />
 >>>>>>> b3666db... add: sounds
+=======
+                <CompPick setCompChoice={setCompChoice}
+                        compChoice={compChoice}
+                        humanChoice={humanChoice}
+                        options={options}
+                        outcome={outcome} />
+>>>>>>> d123f5b... add: mute from keys
 
 
             </div>

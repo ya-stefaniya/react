@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome, counter }) => {
 
 <<<<<<< HEAD
@@ -11,6 +12,9 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
 =======
 >>>>>>> b0c379d... fix: minor
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play }) => {
+=======
+export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome }) => {
+>>>>>>> d123f5b... add: mute from keys
 
 >>>>>>> b3666db... add: sounds
     const symbols = Object.values(options);
@@ -23,6 +27,7 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
             {!humanChoice ? <div className={level == "game-classic" ? 'options' : 'options icons-hard'}>
                 {symbols.map((item, index) =>
                     <Link to='/result' key={index}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -47,6 +52,9 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
 =======
                     
 >>>>>>> b0c379d... fix: minor
+=======
+
+>>>>>>> d123f5b... add: mute from keys
                         <Emoji
                             key={index}
                             id={item.name}
@@ -64,7 +72,11 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
                     </Link>
                 )}
             </div>
+<<<<<<< HEAD
                 : <div className={`human-choice ${outcome == 'win' && counter == 0 ? 'winner' : ''}`} >
+=======
+                : <div className={`human-choice ${outcome == 'win' ? 'winner' : ''}`} >
+>>>>>>> d123f5b... add: mute from keys
                     <span>{humanChoice}</span>
                     <div className='answer'>
                         {result.symbol}

@@ -4,11 +4,15 @@
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import useSound from 'use-sound';
 import sprite from './sounds/sprite.mp3';
 =======
 // import { Animated } from 'react-animated-css'
 // console.log('Animated: ', Animated);
+=======
+//
+>>>>>>> d123f5b... add: mute from keys
 
 >>>>>>> b3666db... add: sounds
 
@@ -84,12 +88,16 @@ function App() {
     <Router>
       <div className="App" >
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Header {...clicks}{...levels} play={play} />
 
         {levels.level &&
           <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} play={play} {...name} />}
 =======
         <Header {...clicks} />
+=======
+        <Header {...clicks} {...levels} />
+>>>>>>> d123f5b... add: mute from keys
 
         {levels.level &&
           <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
@@ -104,6 +112,7 @@ function App() {
           <Route path="/result" render={() =>
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
         <Footer />
@@ -130,6 +139,9 @@ import { useLevel } from './hooks/useLevel';
 import { ButtonsStart } from "./components/ButtonsStart";
 import { GameEasy } from "./components/GameEasy"
 import { GameHard } from "./components/GameHard"
+=======
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
+>>>>>>> d123f5b... add: mute from keys
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 >>>>>>> 01b41c5... add:basic game

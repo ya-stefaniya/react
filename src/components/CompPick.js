@@ -3,11 +3,19 @@ import { React, useState, useEffect } from "react";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
 
     return (
         <>
             {humanChoice && <div className={`comp-choice ${outcome == 'lose' && counter == 0 ? 'winner' : ''}`}>
+=======
+export const CompPick = ({ compChoice, humanChoice, options, outcome }) => {
+
+    return (
+        <>
+            {humanChoice && <div className={`comp-choice ${outcome=='lose' ? 'winner' : ''}`}>
+>>>>>>> d123f5b... add: mute from keys
                 <span>{compChoice && compChoice.name}</span>
                 <div className='answer'>
                     {compChoice && compChoice.symbol}
