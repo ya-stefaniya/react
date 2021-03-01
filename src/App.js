@@ -53,7 +53,7 @@ function App() {
   return (
     <Router>
       <div className="App" >
-        <Header {...clicks} {...levels} />
+        <Header {...clicks} {...levels} play={play} />
 
         {levels.level &&
           <Route path='/game-classic' render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}

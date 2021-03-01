@@ -1,15 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Link } from 'react-router-dom';
+import { useKeys } from '../hooks/useKeys';
 
 
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
     humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
 
-const reload = () => {
+    const reload = () => {
         setCompChoice();
         setHumanChoice();
-        //setOutcome();
     }
+
+    const onKeypress = e => {
+        if (e.code === 'KeyC')
+            setLevel('game-classic');
+        if (e.code === 'KeyH')
+            setLevel('game-hard');
+    }
+    useKeys(onKeypress);
+
 
     return (<main className="buttons-start">
         <section className='main-screen'>
@@ -26,7 +35,7 @@ const reload = () => {
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
                                 if (enabled) play();
-                                if(compChoice) reload();
+                                if (compChoice) reload();
                             }}>start</button>
                     </div>
                 </Link>
@@ -39,7 +48,7 @@ const reload = () => {
                                 setLevel('game-hard');
                                 chooseOptions('game-hard');
                                 if (enabled) play();
-                                 if(compChoice) reload();
+                                if (compChoice) reload();
                             }}
                         >start</button>
                     </div>

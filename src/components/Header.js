@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import { Settings } from './Settings'
 import { Link } from 'react-router-dom';
 
-export const Header = ({ toggleSounds, enabled, setCompChoice, setHumanChoice, compChoice }) => {
+export const Header = ({ toggleSounds, enabled, play }) => {
 
     return (
         <>
@@ -15,7 +15,9 @@ export const Header = ({ toggleSounds, enabled, setCompChoice, setHumanChoice, c
                         </div>
                     </Link>
                 </div>
-                <Settings toggleSounds={toggleSounds} enabled={enabled} />
+                <Settings toggleSounds={toggleSounds}
+                    enabled={enabled}
+                    play={play} />
             </header>
         </>
 
