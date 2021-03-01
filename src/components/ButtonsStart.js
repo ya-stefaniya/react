@@ -2,20 +2,23 @@ import React, { useEffect, useLayoutEffect } from "react";
 import { Link } from 'react-router-dom';
 import { useKeys } from '../hooks/useKeys';
 
-
-export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play,
-    humanChoice, setHumanChoice, compChoice, setCompChoice }) => {
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play }) => {
 
     const reload = () => {
         setCompChoice();
         setHumanChoice();
     }
 
+    //key control of the level
     const onKeypress = e => {
-        if (e.code === 'KeyC')
+        if (e.code === 'KeyC') {
+            setLevel('');
             setLevel('game-classic');
-        if (e.code === 'KeyH')
+        }
+        else if (e.code === 'KeyH') {
+            setLevel('');
             setLevel('game-hard');
+        }
     }
     useKeys(onKeypress);
 

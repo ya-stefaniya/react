@@ -8,7 +8,7 @@ export const Header = ({ toggleSounds, enabled, play }) => {
         <>
             <header>
                 <div>
-                    <Link to='/'>
+                    <Link to='/' onClick={play}>
                         <div className="logo">
                             <div className="icon">&#127918;</div>
                             <h1 className="header">Rock & Paper & Scissors</h1>

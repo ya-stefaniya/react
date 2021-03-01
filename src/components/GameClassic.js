@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from "react";
 import { HumanPick } from './HumanPick';
 import { Result } from './Result';
+import { useClicks } from '../hooks/useClicks';
 
-import useSound from 'use-sound';
 import menu from '../sounds/menu.mp3';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -16,12 +16,7 @@ export const GameClassic = ({ level, setLevel, options,
 
     //у нас есть уровень level
 
-    const [play, { stop }] = useSound(menu);
-    useEffect(() => stop, []);
-
-
-
-
+    const { play } = useClicks(menu);
 
     return (
         <Router>
