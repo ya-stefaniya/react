@@ -40,10 +40,13 @@ import { useClicks } from './hooks/useClicks';
 import { useName } from './hooks/useName';
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> b3666db... add: sounds
 
+=======
+>>>>>>> a77c656... add: comment to game result
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 function App() {
@@ -69,8 +72,11 @@ function App() {
   const clicks = useClicks(click);
 >>>>>>> 2262b8f... add: keys control of level
 
+<<<<<<< HEAD
 
 >>>>>>> b3666db... add: sounds
+=======
+>>>>>>> a77c656... add: comment to game result
   //refresh options according to level in LocalStorage
   useEffect(() => {
     options.chooseOptions(levels.level);

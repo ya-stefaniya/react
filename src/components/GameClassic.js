@@ -11,13 +11,18 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import useSound from 'use-sound';
 =======
 import { useClicks } from '../hooks/useClicks';
+import { useAction } from '../hooks/useAction';
 
 >>>>>>> 2262b8f... add: keys control of level
 import menu from '../sounds/menu.mp3';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 >>>>>>> b3666db... add: sounds
+=======
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+>>>>>>> a77c656... add: comment to game result
 
 export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
@@ -51,6 +56,7 @@ export const GameClassic = ({ level, setLevel, options,
 >>>>>>> 48043d0... add: info about hard-level
     const { play } = useClicks(menu);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2262b8f... add: keys control of level
 
     return (
@@ -80,6 +86,10 @@ export const GameClassic = ({ level, setLevel, options,
                                     <h3>Opponent</h3>
                                 </div>
 =======
+=======
+    const actions = useAction('no-action');
+
+>>>>>>> a77c656... add: comment to game result
     const reload = () => {
         setCompChoice();
         setHumanChoice();
@@ -131,7 +141,7 @@ export const GameClassic = ({ level, setLevel, options,
                                 options={options} outcome={outcome} setOutcome={setOutcome}
                                 compScore={compScore} setCompScore={setCompScore}
                                 humanScore={humanScore} setHumanScore={setHumanScore} enabled={enabled}
-                                play={play}
+                                play={play} {...actions}
                             />
                         </Route>
 

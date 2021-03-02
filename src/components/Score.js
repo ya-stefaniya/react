@@ -1,10 +1,18 @@
 import { React, useEffect } from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { useKeys } from '../hooks/useKeys';
 
 export const Score = ({ outcome, enabled, play,
     action, humanChoice, compChoice, reload }) => {
 
+=======
+
+export const Score = ({ outcome, setOutcome, enabled, play,
+    action, setAction, humanChoice, compChoice, reload }) => {
+
+    console.log(action);
+>>>>>>> a77c656... add: comment to game result
     return (
         <div className="score">
             {
@@ -18,8 +26,12 @@ export const Score = ({ outcome, enabled, play,
                     outcome == 'lose' ? <h3 className="comment">{`${compChoice.name} ${action} ${humanChoice}`}</h3> : ''
             }
             {<Link to='/game-classic' onClick={() => {
+<<<<<<< HEAD
                 reload();
                 if (enabled) play({ id: 'cl2' })
+=======
+                reload(); if (enabled) play()
+>>>>>>> a77c656... add: comment to game result
             }}>
                 <h3 className='again'>Again</h3></Link>}
         </div>

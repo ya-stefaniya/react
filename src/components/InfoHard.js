@@ -12,9 +12,12 @@ export const InfoHard = () => {
 =======
 export const InfoHard = () => {
     const [style, setStyle] = useState({ opacity: '0' });
+<<<<<<< HEAD
     console.log('style: ', style);
 
 >>>>>>> 0bf1a78... add: change-level button
+=======
+>>>>>>> a77c656... add: comment to game result
 
     return (
         <div className='info-hard'>

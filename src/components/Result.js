@@ -3,6 +3,7 @@ import { CompPick } from './CompPick';
 import { HumanPick } from './HumanPick';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Score } from './Score';
 
 
@@ -14,12 +15,20 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
     const [counter, setCounter] = useState(10);
 =======
 import { Link } from "react-router-dom";
+=======
+import { Score } from './Score';
+>>>>>>> a77c656... add: comment to game result
 
 export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCompChoice,
-    humanScore, setHumanScore, compScore, setCompScore, outcome, setOutcome, enabled, play
+    humanScore, setHumanScore, compScore, setCompScore, outcome,
+    setOutcome, enabled, action, setAction, play
 }) => {
 
+<<<<<<< HEAD
 >>>>>>> b3666db... add: sounds
+=======
+    const [counter, setCounter] = useState(3);
+>>>>>>> a77c656... add: comment to game result
     //create correct object body
     const symbols = Object.values(options);
 
@@ -36,6 +45,10 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
         setHumanChoice();
         setOutcome();
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a77c656... add: comment to game result
     const round = () => {
         const choices = {
             "rock": {
@@ -64,6 +77,11 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
         const compChoiceName = ready && compChoice.name;
         const victory = choices[humanChoice].hasOwnProperty(compChoiceName);
         const verb = victory ? choices[humanChoice][compChoiceName] : choices[compChoiceName][humanChoice];
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a77c656... add: comment to game result
 
         if (ready && (compChoice.name == humanChoice)) {
             setOutcome('draw');
@@ -80,20 +98,31 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
             }
         }
     };
+
     useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a77c656... add: comment to game result
         const timer =
             counter > 0
                 ? setInterval(() => {
                     setCounter(counter - 1);
+<<<<<<< HEAD
                 }, 100)
                 : round();
         if (enabled) play({ id: 'long' });
+=======
+                    if (enabled) play();
+                }, 1000)
+                : round();
+>>>>>>> a77c656... add: comment to game result
         return () => {
             clearInterval(timer);
         };
     }, [counter, compChoice]);
 
+<<<<<<< HEAD
     return (
         <>
             <div className="result">
@@ -135,16 +164,31 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
 =======
         round();
     }, [compChoice]);
+=======
+>>>>>>> a77c656... add: comment to game result
     return (
         <>
             <div className="result">
                 <HumanPick setHumanChoice={setHumanChoice}
-                            humanChoice={humanChoice}
+                    humanChoice={humanChoice}
+                    options={options}
+                    enabled={enabled}
+                    play={play}
+                    outcome={outcome}
+                    counter={counter} />
+                {counter == 0 ?
+                    (<>
+                        <Score humanChoice={humanChoice}
+                            compChoice={compChoice}
                             options={options}
                             enabled={enabled}
                             play={play}
-                            outcome={outcome} />
+                            outcome={outcome}
+                            reload={reload}
+                            action={action}
+                        />
 
+<<<<<<< HEAD
 >>>>>>> d123f5b... add: mute from keys
                 <div className="score">
                     {compChoice &&
@@ -168,6 +212,17 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                         options={options}
                         outcome={outcome} />
 >>>>>>> d123f5b... add: mute from keys
+=======
+                        <CompPick setCompChoice={setCompChoice}
+                            compChoice={compChoice}
+                            humanChoice={humanChoice}
+                            options={options}
+                            outcome={outcome}
+                            counter={counter} />
+                    </>)
+                    :
+                    <div className="counter">{counter}</div>}
+>>>>>>> a77c656... add: comment to game result
 
 
             </div>

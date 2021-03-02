@@ -4,6 +4,7 @@ import { React, useState, useEffect } from "react";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
 
     return (
@@ -16,6 +17,13 @@ export const CompPick = ({ compChoice, humanChoice, options, outcome }) => {
         <>
             {humanChoice && <div className={`comp-choice ${outcome=='lose' ? 'winner' : ''}`}>
 >>>>>>> d123f5b... add: mute from keys
+=======
+export const CompPick = ({ compChoice, humanChoice, outcome, counter }) => {
+
+    return (
+        <>
+            {humanChoice && <div className={`comp-choice ${outcome == 'lose' && counter == 0 ? 'winner' : ''}`}>
+>>>>>>> a77c656... add: comment to game result
                 <span>{compChoice && compChoice.name}</span>
                 <div className='answer'>
                     {compChoice && compChoice.symbol}

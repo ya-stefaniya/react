@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome, counter }) => {
 
 <<<<<<< HEAD
@@ -15,6 +16,9 @@ export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled
 =======
 export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome }) => {
 >>>>>>> d123f5b... add: mute from keys
+=======
+export const HumanPick = ({ humanChoice, setHumanChoice, level, options, enabled, play, outcome, counter }) => {
+>>>>>>> a77c656... add: comment to game result
 
 >>>>>>> b3666db... add: sounds
     const symbols = Object.values(options);
@@ -73,10 +77,14 @@ export const HumanPick = ({ humanChoice, setHumanChoice, choices }) => {
                 )}
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 : <div className={`human-choice ${outcome == 'win' && counter == 0 ? 'winner' : ''}`} >
 =======
                 : <div className={`human-choice ${outcome == 'win' ? 'winner' : ''}`} >
 >>>>>>> d123f5b... add: mute from keys
+=======
+                : <div className={`human-choice ${outcome == 'win' && counter == 0 ? 'winner' : ''}`} >
+>>>>>>> a77c656... add: comment to game result
                     <span>{humanChoice}</span>
                     <div className='answer'>
                         {result.symbol}
