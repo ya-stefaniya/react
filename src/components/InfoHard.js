@@ -2,8 +2,6 @@ import { React, useEffect, useState } from "react";
 
 export const InfoHard = () => {
     const [style, setStyle] = useState({ opacity: '0' });
-    console.log('style: ', style);
-
 
     return (
         <div className='info-hard'>

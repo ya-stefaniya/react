@@ -158,8 +158,9 @@ header {
     position: absolute;
     text-align: center;
     padding: 1rem;
-    width: 13rem;
-    height: 9rem;
+    width: auto;
+    min-width: 14rem;
+    height: 10rem;
     bottom: 12rem;
     display: flex;
     flex-direction: column;
@@ -179,7 +180,15 @@ header {
         font-size: 3rem;
         margin: 0;
         }
-        h3{
+        .comment{
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 400;
+        font-size: 1.2rem;
+
+        }
+        .again{
         color: #ff3d6f;
         font-weight: 400;
         cursor: pointer;

@@ -15,9 +15,6 @@ import { useChoices } from './hooks/useChoices';
 import { useOutcome } from './hooks/useOutcome';
 import { useClicks } from './hooks/useClicks';
 
-
-
-
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 function App() {
@@ -27,7 +24,6 @@ function App() {
   const choices = useChoices();
   const outcome = useOutcome();
   const clicks = useClicks(click);
-
 
   //refresh options according to level in LocalStorage
   useEffect(() => {

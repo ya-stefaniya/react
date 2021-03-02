@@ -165,8 +165,9 @@ header .icon {
   position: absolute;
   text-align: center;
   padding: 1rem;
-  width: 13rem;
-  height: 9rem;
+  width: auto;
+  min-width: 14rem;
+  height: 10rem;
   bottom: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,7 +201,15 @@ header .icon {
   margin: 0;
 }
 
-.score h3 {
+.score .comment {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.score .again {
   color: #ff3d6f;
   font-weight: 400;
   cursor: pointer;

@@ -2,11 +2,10 @@ import { React, useState, useEffect } from "react";
 import { HumanPick } from './HumanPick';
 import { Result } from './Result';
 import { useClicks } from '../hooks/useClicks';
+import { useAction } from '../hooks/useAction';
 
 import menu from '../sounds/menu.mp3';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
@@ -16,6 +15,8 @@ export const GameClassic = ({ level, setLevel, options,
 
     //у нас есть уровень level
     const { play } = useClicks(menu);
+    const actions = useAction('no-action');
+
     const reload = () => {
         setCompChoice();
         setHumanChoice();
@@ -55,7 +56,7 @@ export const GameClassic = ({ level, setLevel, options,
                                 options={options} outcome={outcome} setOutcome={setOutcome}
                                 compScore={compScore} setCompScore={setCompScore}
                                 humanScore={humanScore} setHumanScore={setHumanScore} enabled={enabled}
-                                play={play}
+                                play={play} {...actions}
                             />
                         </Route>
 
