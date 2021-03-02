@@ -9,6 +9,10 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ebf737... add: sounds from app
 export const Header = ({ toggleSounds, enabled, play }) => {
     return (
         <>
@@ -53,7 +57,7 @@ export const Header = ({ toggleSounds, enabled, play }) => {
         <>
             <header>
                 <div>
-                    <Link to='/' onClick={play}>
+                    <Link to='/' onClick={() => play({ id: 'cl2' })}>
                         <div className="logo">
                             <div className="icon">&#127918;</div>
                             <h1 className="header">Rock & Paper & Scissors</h1>

@@ -22,10 +22,14 @@ export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
             onClick={(e) => {
                 setHumanChoice(e.target.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (enabled) play({ id: 'cl2' });
 =======
                 if (enabled) play();
 >>>>>>> b3666db... add: sounds
+=======
+                if (enabled) play({ id: 'cl2' });
+>>>>>>> 3ebf737... add: sounds from app
             }
             }
         >

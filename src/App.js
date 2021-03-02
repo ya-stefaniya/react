@@ -5,6 +5,7 @@ import { React, useState, useEffect } from "react";
 import './css/style.scss';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import useSound from 'use-sound';
 import sprite from './sounds/sprite.mp3';
 =======
@@ -13,6 +14,10 @@ import sprite from './sounds/sprite.mp3';
 =======
 //
 >>>>>>> d123f5b... add: mute from keys
+=======
+import useSound from 'use-sound';
+import sprite from './sounds/sprite.mp3';
+>>>>>>> 3ebf737... add: sounds from app
 
 <<<<<<< HEAD
 >>>>>>> b3666db... add: sounds
@@ -24,12 +29,15 @@ import { ButtonsStart } from "./components/ButtonsStart";
 import { GameClassic } from "./components/GameClassic"
 import { Result } from "./components/Result"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Footer } from "./components/Footer"
 
 =======
 import click from './sounds/click.mp3';
 >>>>>>> 2262b8f... add: keys control of level
 
+=======
+>>>>>>> 3ebf737... add: sounds from app
 //hooks
 import { useLevel } from './hooks/useLevel';
 import { useOptions } from './hooks/useOptions';
@@ -56,9 +64,14 @@ function App() {
   const choices = useChoices();
   const outcome = useOutcome();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const clicks = useClicks();
 <<<<<<< HEAD
   const name = useName('Your name');
+=======
+  const clicks = useClicks();
+
+>>>>>>> 3ebf737... add: sounds from app
   const [play] = useSound(sprite, {
     sprite: {
       cl1: [0, 600],
@@ -66,6 +79,7 @@ function App() {
       long: [850, 100],
     },
   });
+<<<<<<< HEAD
 
 =======
 =======
@@ -73,6 +87,8 @@ function App() {
 >>>>>>> 2262b8f... add: keys control of level
 
 <<<<<<< HEAD
+=======
+>>>>>>> 3ebf737... add: sounds from app
 
 >>>>>>> b3666db... add: sounds
 =======
@@ -102,6 +118,7 @@ function App() {
   return (
     <Router>
       <div className="App" >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,10 +156,21 @@ function App() {
         {levels.level &&
           <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} />}
 >>>>>>> 0bf1a78... add: change-level button
+=======
+        <Header {...clicks}{...levels} play={play} />
+
+        {levels.level &&
+          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} play={play} />}
+          />}
+
+        {levels.level &&
+          <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} {...clicks} play={play} />}
+>>>>>>> 3ebf737... add: sounds from app
           />}
 
         {!choices.humanChoice ? <Redirect to={levels.level} /> :
           <Route path="/result" render={() =>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 =======
@@ -183,6 +211,11 @@ import { GameHard } from "./components/GameHard"
 =======
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} />} />
 >>>>>>> 2262b8f... add: keys control of level
+=======
+            <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
+
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
+>>>>>>> 3ebf737... add: sounds from app
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 >>>>>>> 01b41c5... add:basic game

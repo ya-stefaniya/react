@@ -8,11 +8,14 @@ export const Score = ({ outcome, enabled, play,
 
 =======
 
-export const Score = ({ outcome, setOutcome, enabled, play,
-    action, setAction, humanChoice, compChoice, reload }) => {
+export const Score = ({ outcome, enabled, play,
+    action, humanChoice, compChoice, reload }) => {
 
+<<<<<<< HEAD
     console.log(action);
 >>>>>>> a77c656... add: comment to game result
+=======
+>>>>>>> 3ebf737... add: sounds from app
     return (
         <div className="score">
             {
@@ -27,11 +30,16 @@ export const Score = ({ outcome, setOutcome, enabled, play,
             }
             {<Link to='/game-classic' onClick={() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 reload();
                 if (enabled) play({ id: 'cl2' })
 =======
                 reload(); if (enabled) play()
 >>>>>>> a77c656... add: comment to game result
+=======
+                reload();
+                if (enabled) play({ id: 'cl2' })
+>>>>>>> 3ebf737... add: sounds from app
             }}>
                 <h3 className='again'>Again</h3></Link>}
         </div>

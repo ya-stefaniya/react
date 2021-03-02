@@ -13,6 +13,7 @@ import useSound from 'use-sound';
 import { useClicks } from '../hooks/useClicks';
 import { useAction } from '../hooks/useAction';
 
+<<<<<<< HEAD
 >>>>>>> 2262b8f... add: keys control of level
 import menu from '../sounds/menu.mp3';
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 >>>>>>> b3666db... add: sounds
 =======
+=======
+
+
+>>>>>>> 3ebf737... add: sounds from app
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 >>>>>>> a77c656... add: comment to game result
 
@@ -28,6 +33,7 @@ export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore,
     outcome, setOutcome,
+<<<<<<< HEAD
 <<<<<<< HEAD
     enabled, play, name }) => {
 
@@ -87,6 +93,10 @@ export const GameClassic = ({ level, setLevel, options,
                                 </div>
 =======
 =======
+=======
+    enabled, play }) => {
+
+>>>>>>> 3ebf737... add: sounds from app
     const actions = useAction('no-action');
 
 >>>>>>> a77c656... add: comment to game result
@@ -101,7 +111,7 @@ export const GameClassic = ({ level, setLevel, options,
 
                 <Link to='/'>
                     <button className='back' onClick={() => {
-                        if (enabled) play();
+                        if (enabled) play({ id: 'cl1' });
                         if (compChoice) reload();
                         { level == 'game-classic' ? setLevel('game-hard') : setLevel('game-classic') }
                     }}>
@@ -134,14 +144,14 @@ export const GameClassic = ({ level, setLevel, options,
                 </FullScreen>
 =======
                         {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}
-                            options={options} enabled={enabled} play={play} />}
+                            options={options} enabled={enabled} play={play}/>}
 
                         <Route path="/result">
                             <Result humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice}
                                 options={options} outcome={outcome} setOutcome={setOutcome}
                                 compScore={compScore} setCompScore={setCompScore}
                                 humanScore={humanScore} setHumanScore={setHumanScore} enabled={enabled}
-                                play={play} {...actions}
+                                {...actions} play={play}
                             />
                         </Route>
 

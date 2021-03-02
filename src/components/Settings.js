@@ -54,17 +54,25 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
     return (
         <div className="settings icon">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <span onClick={() => { toggleSounds(); if (!enabled) play({ id: 'cl2' }) }}> {enabled ? '🔈' : '🔇'}</span>
 =======
             <span onClick={() => { toggleSounds(); if (!enabled) play() }}> {enabled ? '🔈' : '🔇'}</span>
 >>>>>>> 1746332... add: keys useeffect
+=======
+            <span onClick={() => { toggleSounds(); if (!enabled) play({ id: 'cl2' }) }}> {enabled ? '🔈' : '🔇'}</span>
+>>>>>>> 3ebf737... add: sounds from app
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
             <span>&#129351;</span>
 <<<<<<< HEAD
         </div >
 =======
             <span>&#128511;</span>
+<<<<<<< HEAD
         </div>
 >>>>>>> 48043d0... add: info about hard-level
+=======
+        </div >
+>>>>>>> 3ebf737... add: sounds from app
     )
 }

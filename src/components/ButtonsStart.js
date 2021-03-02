@@ -154,7 +154,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                             onClick={() => {
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
-                                if (enabled) play();
+                                if (enabled) play({ id: 'cl2' });
                                 if (compChoice) reload();
                             }}>start</button>
 >>>>>>> b3666db... add: sounds
@@ -172,7 +172,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
                             onClick={() => {
                                 setLevel('game-hard');
                                 chooseOptions('game-hard');
-                                if (enabled) play();
+                                if (enabled) play({ id: 'cl2' });
                                 if (compChoice) reload();
                             }}
                         >start</button>

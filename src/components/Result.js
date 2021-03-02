@@ -7,6 +7,7 @@ import { HumanPick } from './HumanPick';
 import { Score } from './Score';
 
 
+<<<<<<< HEAD
 export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore, outcome,
     setOutcome, enabled, action, setAction, play
@@ -19,16 +20,22 @@ import { Link } from "react-router-dom";
 import { Score } from './Score';
 >>>>>>> a77c656... add: comment to game result
 
+=======
+>>>>>>> 3ebf737... add: sounds from app
 export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore, outcome,
     setOutcome, enabled, action, setAction, play
 }) => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b3666db... add: sounds
 =======
     const [counter, setCounter] = useState(3);
 >>>>>>> a77c656... add: comment to game result
+=======
+    const [counter, setCounter] = useState(10);
+>>>>>>> 3ebf737... add: sounds from app
     //create correct object body
     const symbols = Object.values(options);
 
@@ -46,9 +53,12 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
         setOutcome();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a77c656... add: comment to game result
+=======
+>>>>>>> 3ebf737... add: sounds from app
     const round = () => {
         const choices = {
             "rock": {
@@ -80,9 +90,12 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> a77c656... add: comment to game result
 
+=======
+>>>>>>> 3ebf737... add: sounds from app
         if (ready && (compChoice.name == humanChoice)) {
             setOutcome('draw');
             setAction('');
@@ -98,7 +111,6 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
             }
         }
     };
-
     useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +121,7 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                 ? setInterval(() => {
                     setCounter(counter - 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 }, 100)
                 : round();
         if (enabled) play({ id: 'long' });
@@ -117,6 +130,11 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                 }, 1000)
                 : round();
 >>>>>>> a77c656... add: comment to game result
+=======
+                }, 100)
+                : round();
+        if (enabled) play({ id: 'long' });
+>>>>>>> 3ebf737... add: sounds from app
         return () => {
             clearInterval(timer);
         };
@@ -173,10 +191,10 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                     humanChoice={humanChoice}
                     options={options}
                     enabled={enabled}
-                    play={play}
+                    // play={play}
                     outcome={outcome}
                     counter={counter} />
-                {counter == 0 ?
+                {counter === 0 ?
                     (<>
                         <Score humanChoice={humanChoice}
                             compChoice={compChoice}
@@ -187,6 +205,7 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                             reload={reload}
                             action={action}
                         />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d123f5b... add: mute from keys
@@ -213,6 +232,8 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                         outcome={outcome} />
 >>>>>>> d123f5b... add: mute from keys
 =======
+=======
+>>>>>>> 3ebf737... add: sounds from app
                         <CompPick setCompChoice={setCompChoice}
                             compChoice={compChoice}
                             humanChoice={humanChoice}
@@ -221,8 +242,17 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                             counter={counter} />
                     </>)
                     :
+<<<<<<< HEAD
                     <div className="counter">{counter}</div>}
 >>>>>>> a77c656... add: comment to game result
+=======
+                    <CompPick setCompChoice={setCompChoice}
+                        compChoice={compChoice}
+                        humanChoice={humanChoice}
+                        options={options}
+                        outcome={outcome}
+                        counter={counter} />}
+>>>>>>> 3ebf737... add: sounds from app
 
 
             </div>
