@@ -39,7 +39,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                             onClick={() => {
                                 setLevel('game-classic');
                                 chooseOptions('game-classic');
-                                if (enabled) play();
+                                if (enabled) play({ id: 'cl2' });
                                 if (compChoice) reload();
                             }}>start</button>
                     </div>
@@ -52,7 +52,7 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
                             onClick={() => {
                                 setLevel('game-hard');
                                 chooseOptions('game-hard');
-                                if (enabled) play();
+                                if (enabled) play({ id: 'cl2' });
                                 if (compChoice) reload();
                             }}
                         >start</button>

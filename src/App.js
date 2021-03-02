@@ -1,13 +1,12 @@
 import { React, useState, useEffect } from "react";
 import './css/style.scss';
-//
+import useSound from 'use-sound';
+import sprite from './sounds/sprite.mp3';
 
 import { Header } from "./components/Header";
 import { ButtonsStart } from "./components/ButtonsStart";
 import { GameClassic } from "./components/GameClassic"
 import { Result } from "./components/Result"
-import click from './sounds/click.mp3';
-
 //hooks
 import { useLevel } from './hooks/useLevel';
 import { useOptions } from './hooks/useOptions';
@@ -23,7 +22,15 @@ function App() {
   const options = useOptions();
   const choices = useChoices();
   const outcome = useOutcome();
-  const clicks = useClicks(click);
+  const clicks = useClicks();
+
+  const [play] = useSound(sprite, {
+    sprite: {
+      cl1: [0, 600],
+      cl2: [600, 250],
+      long: [850, 100],
+    },
+  });
 
   //refresh options according to level in LocalStorage
   useEffect(() => {
@@ -33,21 +40,21 @@ function App() {
   return (
     <Router>
       <div className="App" >
-        <Header {...clicks} {...levels} />
+        <Header {...clicks}{...levels} play={play} />
 
         {levels.level &&
-          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} />}
+          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} play={play} />}
           />}
 
         {levels.level &&
-          <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} />}
+          <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} {...clicks} play={play} />}
           />}
 
         {!choices.humanChoice ? <Redirect to={levels.level} /> :
           <Route path="/result" render={() =>
-            <Result {...choices} {...outcome} {...levels} {...options} />} />}
+            <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 
-        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} />} />
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
 
       </div>
     </Router>

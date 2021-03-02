@@ -13,7 +13,7 @@ export const Emoji = ({ id, label, symbol, setHumanChoice, enabled, play }) => {
             aria-hidden={label ? "false" : "true"}
             onClick={(e) => {
                 setHumanChoice(e.target.id);
-                if (enabled) play();
+                if (enabled) play({ id: 'cl2' });
             }
             }
         >

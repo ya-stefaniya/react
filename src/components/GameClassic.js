@@ -4,17 +4,16 @@ import { Result } from './Result';
 import { useClicks } from '../hooks/useClicks';
 import { useAction } from '../hooks/useAction';
 
-import menu from '../sounds/menu.mp3';
+
+
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore,
     outcome, setOutcome,
-    enabled }) => {
+    enabled, play }) => {
 
-    //у нас есть уровень level
-    const { play } = useClicks(menu);
     const actions = useAction('no-action');
 
     const reload = () => {
@@ -28,7 +27,7 @@ export const GameClassic = ({ level, setLevel, options,
 
                 <Link to='/'>
                     <button className='back' onClick={() => {
-                        if (enabled) play();
+                        if (enabled) play({ id: 'cl1' });
                         if (compChoice) reload();
                         { level == 'game-classic' ? setLevel('game-hard') : setLevel('game-classic') }
                     }}>
@@ -49,14 +48,14 @@ export const GameClassic = ({ level, setLevel, options,
 
                         </div>
                         {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}
-                            options={options} enabled={enabled} play={play} />}
+                            options={options} enabled={enabled} play={play}/>}
 
                         <Route path="/result">
                             <Result humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice}
                                 options={options} outcome={outcome} setOutcome={setOutcome}
                                 compScore={compScore} setCompScore={setCompScore}
                                 humanScore={humanScore} setHumanScore={setHumanScore} enabled={enabled}
-                                play={play} {...actions}
+                                {...actions} play={play}
                             />
                         </Route>
 

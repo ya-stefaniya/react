@@ -20,10 +20,10 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
 
     return (
         <div className="settings icon">
-            <span onClick={() => { toggleSounds(); if (!enabled) play() }}> {enabled ? '🔈' : '🔇'}</span>
+            <span onClick={() => { toggleSounds(); if (!enabled) play({ id: 'cl2' }) }}> {enabled ? '🔈' : '🔇'}</span>
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
             <span>&#129351;</span>
             <span>&#128511;</span>
-        </div>
+        </div >
     )
 }

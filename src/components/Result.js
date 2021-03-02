@@ -3,12 +3,13 @@ import { CompPick } from './CompPick';
 import { HumanPick } from './HumanPick';
 import { Score } from './Score';
 
+
 export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore, outcome,
     setOutcome, enabled, action, setAction, play
 }) => {
 
-    const [counter, setCounter] = useState(3);
+    const [counter, setCounter] = useState(10);
     //create correct object body
     const symbols = Object.values(options);
 
@@ -25,7 +26,6 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
         setHumanChoice();
         setOutcome();
     }
-
     const round = () => {
         const choices = {
             "rock": {
@@ -55,8 +55,6 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
         const victory = choices[humanChoice].hasOwnProperty(compChoiceName);
         const verb = victory ? choices[humanChoice][compChoiceName] : choices[compChoiceName][humanChoice];
 
-
-
         if (ready && (compChoice.name == humanChoice)) {
             setOutcome('draw');
             setAction('');
@@ -72,15 +70,14 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
             }
         }
     };
-
     useEffect(() => {
         const timer =
             counter > 0
                 ? setInterval(() => {
                     setCounter(counter - 1);
-                    if (enabled) play();
-                }, 1000)
+                }, 100)
                 : round();
+        if (enabled) play({ id: 'long' });
         return () => {
             clearInterval(timer);
         };
@@ -93,10 +90,10 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                     humanChoice={humanChoice}
                     options={options}
                     enabled={enabled}
-                    play={play}
+                    // play={play}
                     outcome={outcome}
                     counter={counter} />
-                {counter == 0 ?
+                {counter === 0 ?
                     (<>
                         <Score humanChoice={humanChoice}
                             compChoice={compChoice}
@@ -107,7 +104,6 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                             reload={reload}
                             action={action}
                         />
-
                         <CompPick setCompChoice={setCompChoice}
                             compChoice={compChoice}
                             humanChoice={humanChoice}
@@ -116,7 +112,12 @@ export const Result = ({ options, humanChoice, setHumanChoice, compChoice, setCo
                             counter={counter} />
                     </>)
                     :
-                    <div className="counter">{counter}</div>}
+                    <CompPick setCompChoice={setCompChoice}
+                        compChoice={compChoice}
+                        humanChoice={humanChoice}
+                        options={options}
+                        outcome={outcome}
+                        counter={counter} />}
 
 
             </div>

@@ -49,7 +49,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(0, 0, 0, 0.555);
+  color: rgba(0, 0, 0, 0.74);
   background-color: #e8bc78;
   background-image: -webkit-gradient(linear, left top, right top, from(#e8bc78), to(#aacbdc));
   background-image: linear-gradient(90deg, #e8bc78 0%, #aacbdc 100%);
@@ -101,6 +101,12 @@ header .icon {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.container .result .counter {
+  font-size: 3rem;
+  font-weight: 200;
+  margin: auto 0;
 }
 
 .container .players {
@@ -236,8 +242,8 @@ header .icon {
             transform: scaleX(1) scaleY(1);
   }
   50% {
-    -webkit-transform: scaleX(0.82) scaleY(0.95);
-            transform: scaleX(0.82) scaleY(0.95);
+    -webkit-transform: scaleX(1.1) scaleY(1.1);
+            transform: scaleX(1.1) scaleY(1.1);
   }
   100% {
     -webkit-transform: scaleX(1) scaleY(1);
@@ -251,8 +257,8 @@ header .icon {
             transform: scaleX(1) scaleY(1);
   }
   50% {
-    -webkit-transform: scaleX(0.82) scaleY(0.95);
-            transform: scaleX(0.82) scaleY(0.95);
+    -webkit-transform: scaleX(1.1) scaleY(1.1);
+            transform: scaleX(1.1) scaleY(1.1);
   }
   100% {
     -webkit-transform: scaleX(1) scaleY(1);
@@ -310,8 +316,8 @@ header .icon {
             transform: scaleX(1) scaleY(1);
   }
   50% {
-    -webkit-transform: scaleX(0.82) scaleY(0.95);
-            transform: scaleX(0.82) scaleY(0.95);
+    -webkit-transform: scaleX(1.1) scaleY(1.1);
+            transform: scaleX(1.1) scaleY(1.1);
   }
   100% {
     -webkit-transform: scaleX(1) scaleY(1);

@@ -1,15 +1,13 @@
 import { useState, useEffect } from "react";
-import useSound from 'use-sound';
 
-export const useClicks = url => {
+
+
+export const useClicks = () => {
     const [enabled, setEnabled] = useState(true);
     const toggleSounds = () => setEnabled(!enabled);
 
-    const [play, { stop }] = useSound(url);
-    useEffect(() => stop, []);
 
-
-    return { toggleSounds, enabled, play, stop };
+    return { toggleSounds, enabled };
 
 
 };
