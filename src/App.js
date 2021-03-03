@@ -8,7 +8,6 @@ import { ButtonsStart } from "./components/ButtonsStart";
 import { GameClassic } from "./components/GameClassic"
 import { Result } from "./components/Result"
 import { Footer } from "./components/Footer"
-import { EndGame } from "./components/EndGame"
 
 
 //hooks
@@ -61,7 +60,6 @@ function App() {
 
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
         <Footer />
-        <EndGame {...name} {...outcome} />
       </div>
     </Router>
   );
