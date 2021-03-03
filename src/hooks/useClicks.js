@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 
-
-
 export const useClicks = () => {
     const [enabled, setEnabled] = useState(true);
     const toggleSounds = () => setEnabled(!enabled);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const [play, { stop }] = useSound(url);
     useEffect(() => stop, []);
@@ -25,5 +24,8 @@ export const useClicks = () => {
 
 
 >>>>>>> b3666db... add: sounds
+=======
+    return { toggleSounds, enabled };
+>>>>>>> 192116d... add:footer
 };
 

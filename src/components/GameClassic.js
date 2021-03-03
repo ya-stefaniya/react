@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import { HumanPick } from './HumanPick';
 import { Result } from './Result';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAction } from '../hooks/useAction';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
@@ -19,6 +20,10 @@ import menu from '../sounds/menu.mp3';
 <<<<<<< HEAD
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
+=======
+import { useAction } from '../hooks/useAction';
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+>>>>>>> 192116d... add:footer
 
 >>>>>>> b3666db... add: sounds
 =======
@@ -33,6 +38,7 @@ export const GameClassic = ({ level, setLevel, options,
     humanChoice, setHumanChoice, compChoice, setCompChoice,
     humanScore, setHumanScore, compScore, setCompScore,
     outcome, setOutcome,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     enabled, play, name }) => {
@@ -95,20 +101,46 @@ export const GameClassic = ({ level, setLevel, options,
 =======
 =======
     enabled, play }) => {
+=======
+    enabled, play, name }) => {
+>>>>>>> 192116d... add:footer
 
 >>>>>>> 3ebf737... add: sounds from app
     const actions = useAction('no-action');
+<<<<<<< HEAD
 
 >>>>>>> a77c656... add: comment to game result
+=======
+    const screen1 = useFullScreenHandle();
+>>>>>>> 192116d... add:footer
     const reload = () => {
         setCompChoice();
         setHumanChoice();
     }
+
     return (
         <Router>
             <>
-                <h1>{level == 'game-classic' ? 'Classic Game' : 'Special Mode'}</h1>
+                <FullScreen handle={screen1}>
+                    <h1>{level == 'game-classic' ? 'Classic Game' : 'Special Mode'}</h1>
+                    <span className="full-screen" onClick={screen1.active ? screen1.exit : screen1.enter}>&#129498;</span>
+                    <Link to='/'>
+                        <button className='back' onClick={() => {
+                            if (enabled) play({ id: 'cl1' });
+                            if (compChoice) reload();
+                            { level == 'game-classic' ? setLevel('game-hard') : setLevel('game-classic') }
+                        }}>
+                            change level</button>
+                    </Link>
+                    <section>
+                        <div className="container">
+                            <div className="players">
+                                <div className="result-header">
+                                    <h3>{name ? name : 'You'}</h3>
+                                    <span>{humanScore}</span>
+                                </div>
 
+<<<<<<< HEAD
                 <Link to='/'>
                     <button className='back' onClick={() => {
                         if (enabled) play({ id: 'cl1' });
@@ -125,6 +157,12 @@ export const GameClassic = ({ level, setLevel, options,
                                 <span>{humanScore}</span>
                             </div>
 >>>>>>> 0bf1a78... add: change-level button
+=======
+                                <div className="result-header">
+                                    <span>{compScore}</span>
+                                    <h3>Opponent</h3>
+                                </div>
+>>>>>>> 192116d... add:footer
 
                             </div>
                             {!compChoice && <HumanPick humanChoice={humanChoice} setHumanChoice={setHumanChoice} compChoice={compChoice} setCompChoice={setCompChoice} level={level}
@@ -139,6 +177,7 @@ export const GameClassic = ({ level, setLevel, options,
                             </Route>
 
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </section>
                 </FullScreen>
@@ -158,6 +197,10 @@ export const GameClassic = ({ level, setLevel, options,
                     </div>
                 </section>
 >>>>>>> b3666db... add: sounds
+=======
+                    </section>
+                </FullScreen>
+>>>>>>> 192116d... add:footer
             </>
         </Router >
     )

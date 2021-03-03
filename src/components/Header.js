@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3ebf737... add: sounds from app
@@ -53,6 +54,9 @@ export const Header = ({ toggleSounds, enabled, setCompChoice, setHumanChoice, c
 export const Header = ({ toggleSounds, enabled, play }) => {
 >>>>>>> 1746332... add: keys useeffect
 
+=======
+export const Header = ({ toggleSounds, enabled, play }) => {
+>>>>>>> 192116d... add:footer
     return (
         <>
             <header>
@@ -73,6 +77,7 @@ export const Header = ({ toggleSounds, enabled, play }) => {
 
     );
 }
+<<<<<<< HEAD
 =======
 import React from "react";
 
@@ -88,3 +93,5 @@ export const Header = () => (
     </>
 );
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> 192116d... add:footer

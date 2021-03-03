@@ -1,6 +1,9 @@
 import { React, useEffect } from "react";
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
 import { useKeys } from '../hooks/useKeys';
 
 export const Score = ({ outcome, enabled, play,

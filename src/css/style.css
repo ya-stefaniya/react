@@ -107,6 +107,9 @@ header .icon {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
 .fullscreen-enabled {
   background: white;
 }
@@ -173,6 +176,9 @@ header .icon {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
 .container .players .result-header:first-child {
   text-transform: uppercase;
 }
@@ -181,8 +187,11 @@ header .icon {
   font-weight: 300;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> 192116d... add:footer
 .container .players .result-header span {
   font-size: 2rem;
   font-weight: 200;
@@ -445,6 +454,9 @@ header .icon {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
 .full-screen {
   position: absolute;
   font-size: 2rem;
@@ -454,6 +466,7 @@ header .icon {
   -webkit-box-shadow: 1px 2px 3px #c8c3c3;
           box-shadow: 1px 2px 3px #c8c3c3;
   cursor: pointer;
+<<<<<<< HEAD
 =======
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -464,6 +477,10 @@ header .icon {
 
 =======
 >>>>>>> d123f5b... add: mute from keys
+=======
+}
+
+>>>>>>> 192116d... add:footer
 .human-choice,
 .comp-choice {
   display: -webkit-box;
@@ -508,6 +525,7 @@ header .icon {
   cursor: pointer;
   outline: none;
   position: absolute;
+<<<<<<< HEAD
   left: 3rem;
 }
 
@@ -588,6 +606,8 @@ header .icon {
   outline: none;
   position: absolute;
   left: 6;
+=======
+>>>>>>> 192116d... add:footer
   left: 3rem;
 }
 
@@ -607,12 +627,18 @@ header .icon {
   display: flex;
   position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
 =======
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> 192116d... add:footer
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -621,6 +647,9 @@ header .icon {
       -ms-flex-pack: center;
           justify-content: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
   margin: 3rem 5rem;
   height: 100%;
 =======
@@ -637,6 +666,9 @@ header .icon {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
 .buttons-start .main-screen .name-input {
   margin-bottom: 3rem;
   border: none;
@@ -666,10 +698,13 @@ header .icon {
 
 .buttons-start .main-screen .start-options .start-easy,
 .buttons-start .main-screen .start-options .start-hard {
+<<<<<<< HEAD
 =======
 .buttons-start .main-screen .start-easy,
 .buttons-start .main-screen .start-hard {
 >>>>>>> 01b41c5... add:basic game
+=======
+>>>>>>> 192116d... add:footer
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,10 +714,14 @@ header .icon {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .buttons-start .main-screen .start-options .button-icons {
 =======
 .buttons-start .main-screen .button-icons {
 >>>>>>> 01b41c5... add:basic game
+=======
+.buttons-start .main-screen .start-options .button-icons {
+>>>>>>> 192116d... add:footer
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,6 +732,9 @@ header .icon {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 192116d... add:footer
 .buttons-start .main-screen .start-options .button-icons span {
   font-size: 5rem;
 }
@@ -764,7 +806,7 @@ header .icon {
 >>>>>>> 0bf1a78... add: change-level button
 }
 
-.buttons-start .main-screen .start:hover {
+.buttons-start .main-screen .start-options .start:hover {
   background-color: #f3b543c7;
   -webkit-box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
           box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
@@ -773,20 +815,25 @@ header .icon {
           transform: translateY(7px);
 }
 
-.buttons-start .main-screen .start.hard:hover {
+.buttons-start .main-screen .start-options .start.hard:hover {
   background-image: url("../images/bbth.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: black;
 }
 
-.buttons-start .main-screen .start-hard .button-icons {
+.buttons-start .main-screen .start-options .start-hard .button-icons {
   position: relative;
 }
 
+<<<<<<< HEAD
 .buttons-start .main-screen .start-hard .button-icons::before {
   content: 'Только на тру фэнс Теории Большого Взрыва!';
 >>>>>>> 01b41c5... add:basic game
+=======
+.buttons-start .main-screen .start-options .start-hard .button-icons::before {
+  content: 'For true fans of The Big Bang Theory!';
+>>>>>>> 192116d... add:footer
   position: absolute;
   top: 2rem;
   left: 6rem;
@@ -905,7 +952,7 @@ header .icon {
   cursor: pointer;
 }
 
-.buttons-start .main-screen .start-hard .info-hard span {
+.buttons-start .main-screen .start-options .start-hard .info-hard span {
   position: relative;
   border-radius: 50%;
   font-size: 1.5rem;
@@ -916,7 +963,7 @@ header .icon {
   height: 3.5rem;
   color: #526060;
   position: absolute;
-  top: -4rem;
+  top: 0;
   right: -4rem;
   z-index: 2;
   -webkit-animation: spinning 5s linear infinite;
@@ -945,15 +992,14 @@ header .icon {
   }
 }
 
-.buttons-start .main-screen .start-hard .info-hard span:hover {
+.buttons-start .main-screen .start-options .start-hard .info-hard span:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-animation: stop;
           animation: stop;
 }
 
-.buttons-start .main-screen .start-hard .info-hard .info {
-  opacity: 0;
+.buttons-start .main-screen .start-options .start-hard .info-hard .info {
   width: 15rem;
   font-weight: 300;
   font-size: 1rem;
@@ -971,8 +1017,41 @@ header .icon {
   line-height: 1.1rem;
 }
 
-.buttons-start .main-screen .start-hard .info-hard .info a {
+.buttons-start .main-screen .start-options .start-hard .info-hard .info a {
   color: black;
+}
+
+.fullscreen.fullscreen-enabled {
+  background-color: #f9f9f9;
+}
+
+.fullscreen.fullscreen-enabled h1 {
+  margin: 3rem;
+  font-weight: 300;
+}
+
+.fullscreen.fullscreen-enabled .full-screen {
+  bottom: 2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.3rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1009,12 +1088,15 @@ header .icon {
     left: 3rem;
     top: 7rem;
   }
+<<<<<<< HEAD
 }
 
 @media screen and (max-width: 585px) {
   header .settings.icon {
     font-size: 2.2rem;
   }
+=======
+>>>>>>> 192116d... add:footer
 }
 
 @media screen and (max-width: 585px) {

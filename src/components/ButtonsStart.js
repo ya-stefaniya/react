@@ -20,6 +20,7 @@ import { useKeys } from '../hooks/useKeys';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play, name, handleChange }) => {
 =======
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, play }) => {
@@ -33,6 +34,9 @@ export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled,
 >>>>>>> 0bf1a78... add: change-level button
 export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play }) => {
 >>>>>>> 2262b8f... add: keys control of level
+=======
+export const ButtonsStart = ({ level, setLevel, options, chooseOptions, enabled, setHumanChoice, compChoice, setCompChoice, play, name, handleChange }) => {
+>>>>>>> 192116d... add:footer
 
     const reload = () => {
         setCompChoice();
@@ -134,6 +138,7 @@ export const ButtonsStart = ({ level, setLevel }) => (
     }
     useKeys(onKeypress);
 
+<<<<<<< HEAD
 
     return (<main className="buttons-start">
 >>>>>>> 1746332... add: keys useeffect
@@ -177,19 +182,64 @@ export const ButtonsStart = ({ level, setLevel }) => (
                             }}
                         >start</button>
 >>>>>>> b3666db... add: sounds
+=======
+    return (
+        <main className="buttons-start">
+            <section className='main-screen'>
+                <input type="text" className="name-input" placeholder="Your name"
+                    value={name} onChange={handleChange}></input>
+                <div className="start-options">
+                    <div className="start-easy">
+                        <div className="button-icons">
+                            <span>&#128074;</span>
+                            <span>&#128075;</span>
+                            <span>&#9996;</span>
+                        </div>
+                        <Link to='/game-classic' level={level} options={options} name={name}>
+                            <div>
+                                <button className="start"
+                                    onClick={() => {
+                                        setLevel('game-classic');
+                                        chooseOptions('game-classic');
+                                        if (enabled) play({ id: 'cl2' });
+                                        if (compChoice) reload();
+                                    }}>start</button>
+                            </div>
+                        </Link>
                     </div>
-                </Link>
-                <InfoHard onClick={() => { if (enabled) play(); }} />
-                <div className="button-icons">
-                    <span>&#128074;</span>
-                    <span>&#128075;</span>
-                    <span>&#9996;</span>
-                    <span>&#129422;</span>
-                    <span>&#128406;</span>
-                </div>
+                    <div className="start-hard" >
+                        <Link to='/game-hard'>
+                            <div>
+                                <button className="start hard"
+                                    onClick={() => {
+                                        setLevel('game-hard');
+                                        chooseOptions('game-hard');
+                                        if (enabled) play({ id: 'cl2' });
+                                        if (compChoice) reload();
+                                    }}
+                                >start</button>
+                            </div>
+                        </Link>
+                        <InfoHard onClick={() => { if (enabled) play(); }} />
+                        <div className="button-icons">
+                            <span>&#128074;</span>
+                            <span>&#128075;</span>
+                            <span>&#9996;</span>
+                            <span>&#129422;</span>
+                            <span>&#128406;</span>
+                        </div>
+>>>>>>> 192116d... add:footer
+                    </div>
 
+<<<<<<< HEAD
             </div>
         </section>
     </main>
 );
 >>>>>>> 01b41c5... add:basic game
+=======
+                </div>
+            </section>
+        </main >)
+};
+>>>>>>> 192116d... add:footer

@@ -30,6 +30,7 @@ import { GameClassic } from "./components/GameClassic"
 import { Result } from "./components/Result"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Footer } from "./components/Footer"
 
 =======
@@ -38,6 +39,12 @@ import click from './sounds/click.mp3';
 
 =======
 >>>>>>> 3ebf737... add: sounds from app
+=======
+import { Footer } from "./components/Footer"
+import { EndGame } from "./components/EndGame"
+
+
+>>>>>>> 192116d... add:footer
 //hooks
 import { useLevel } from './hooks/useLevel';
 import { useOptions } from './hooks/useOptions';
@@ -45,10 +52,14 @@ import { useChoices } from './hooks/useChoices';
 import { useOutcome } from './hooks/useOutcome';
 import { useClicks } from './hooks/useClicks';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useName } from './hooks/useName';
 =======
 
 <<<<<<< HEAD
+=======
+import { useName } from './hooks/useName';
+>>>>>>> 192116d... add:footer
 
 
 >>>>>>> b3666db... add: sounds
@@ -70,8 +81,12 @@ function App() {
   const name = useName('Your name');
 =======
   const clicks = useClicks();
+<<<<<<< HEAD
 
 >>>>>>> 3ebf737... add: sounds from app
+=======
+  const name = useName('Your name');
+>>>>>>> 192116d... add:footer
   const [play] = useSound(sprite, {
     sprite: {
       cl1: [0, 600],
@@ -160,12 +175,16 @@ function App() {
         <Header {...clicks}{...levels} play={play} />
 
         {levels.level &&
-          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} play={play} />}
+          <Route path='/game-classic' exact render={() => <GameClassic {...levels} {...options} {...choices} {...outcome} {...clicks} play={play} {...name} />}
           />}
 
         {levels.level &&
+<<<<<<< HEAD
           <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} {...clicks} play={play} />}
 >>>>>>> 3ebf737... add: sounds from app
+=======
+          <Route path='/game-hard' exact render={() => <GameClassic {...levels}  {...options} {...choices} {...outcome} {...clicks} play={play} {...name} />}
+>>>>>>> 192116d... add:footer
           />}
 
         {!choices.humanChoice ? <Redirect to={levels.level} /> :
@@ -214,6 +233,7 @@ import { GameHard } from "./components/GameHard"
 =======
             <Result {...choices} {...outcome} {...levels} {...options} play={play} />} />}
 
+<<<<<<< HEAD
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} />} />
 >>>>>>> 3ebf737... add: sounds from app
 
@@ -230,6 +250,11 @@ function App() {
         {levels.level ? <Route path='/game-easy' component={GameEasy} /> : ""}
         {levels.level ? <Route path='/game-hard' component={GameHard} /> : ""}
         {levels.level ? ' ' : <ButtonsStart {...levels} />}
+=======
+        <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
+        <Footer />
+        <EndGame {...name} {...outcome} />
+>>>>>>> 192116d... add:footer
       </div>
     </Router>
   );

@@ -30,8 +30,6 @@ import { useMusic } from '../hooks/useMusic';
 >>>>>>> 1746332... add: keys useeffect
 import back from '../sounds/back.mp3';
 
-
-
 export const Settings = ({ toggleSounds, enabled, play }) => {
 
     const [playing, toggle] = useMusic(back);
@@ -43,10 +41,11 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
 
 >>>>>>> 1746332... add: keys useeffect
     const onKeypress = e => {
-        if (e.code === 'KeyM')
+        if (e.ctrlKey && e.code === 'KeyM')
             toggle();
-        if (e.code === 'KeyS')
+        if (e.ctrlKey && e.code === 'KeyS')
             toggleSounds();
+        if (!enabled) play({ id: 'cl2' })
     }
     useKeys(onKeypress);
 
@@ -65,6 +64,7 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
             <span>&#129351;</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div >
 =======
             <span>&#128511;</span>
@@ -72,6 +72,8 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
         </div>
 >>>>>>> 48043d0... add: info about hard-level
 =======
+=======
+>>>>>>> 192116d... add:footer
         </div >
 >>>>>>> 3ebf737... add: sounds from app
     )
