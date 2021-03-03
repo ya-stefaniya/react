@@ -64,6 +64,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "node backend/server",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -77,6 +78,12 @@
 =======
     "eject": "react-scripts eject"
 >>>>>>> f95bbb1... Initialize project using Create React App
+=======
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+>>>>>>> be0769f... del: back-files
   },
   "eslintConfig": {
     "extends": [

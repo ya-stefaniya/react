@@ -41,7 +41,6 @@ import click from './sounds/click.mp3';
 >>>>>>> 3ebf737... add: sounds from app
 =======
 import { Footer } from "./components/Footer"
-import { EndGame } from "./components/EndGame"
 
 
 >>>>>>> 192116d... add:footer
@@ -253,8 +252,11 @@ function App() {
 =======
         <Route path='/' exact render={() => <ButtonsStart {...levels} {...options} {...clicks}  {...choices} play={play} {...name} />} />
         <Footer />
+<<<<<<< HEAD
         <EndGame {...name} {...outcome} />
 >>>>>>> 192116d... add:footer
+=======
+>>>>>>> be0769f... del: back-files
       </div>
     </Router>
   );
