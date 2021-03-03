@@ -81,6 +81,10 @@ header .icon {
   margin: 0 0.5rem;
 }
 
+.fullscreen-enabled {
+  background: white;
+}
+
 .container {
   margin: 0 15rem;
   display: -webkit-box;
@@ -127,6 +131,14 @@ header .icon {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 15rem;
+}
+
+.container .players .result-header:first-child {
+  text-transform: uppercase;
+}
+
+.container .players .result-header:first-child h3 {
+  font-weight: 300;
 }
 
 .container .players .result-header span {
@@ -340,6 +352,17 @@ header .icon {
   }
 }
 
+.full-screen {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 1rem;
+  left: 1rem;
+  color: #b0c9d2;
+  -webkit-box-shadow: 1px 2px 3px #c8c3c3;
+          box-shadow: 1px 2px 3px #c8c3c3;
+  cursor: pointer;
+}
+
 .human-choice,
 .comp-choice {
   display: -webkit-box;
@@ -375,7 +398,6 @@ header .icon {
   cursor: pointer;
   outline: none;
   position: absolute;
-  left: 6;
   left: 3rem;
 }
 
@@ -393,6 +415,10 @@ header .icon {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -400,7 +426,7 @@ header .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 6rem 5rem;
+  margin: 3rem 5rem;
   height: 100%;
 }
 
@@ -412,8 +438,35 @@ header .icon {
   height: 500px;
 }
 
-.buttons-start .main-screen .start-easy,
-.buttons-start .main-screen .start-hard {
+.buttons-start .main-screen .name-input {
+  margin-bottom: 3rem;
+  border: none;
+  -webkit-box-sizing: 3px 3px 3px black;
+          box-sizing: 3px 3px 3px black;
+  -webkit-box-shadow: 0px 3px 9px #aba4a4ab;
+          box-shadow: 0px 3px 9px #aba4a4ab;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+  font-weight: 500;
+  letter-spacing: 0.11rem;
+  text-transform: uppercase;
+}
+
+.buttons-start .main-screen .start-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.buttons-start .main-screen .start-options .start-easy,
+.buttons-start .main-screen .start-options .start-hard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,7 +475,7 @@ header .icon {
           align-items: center;
 }
 
-.buttons-start .main-screen .button-icons {
+.buttons-start .main-screen .start-options .button-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,11 +485,11 @@ header .icon {
           flex-direction: column;
 }
 
-.buttons-start .main-screen .button-icons span {
+.buttons-start .main-screen .start-options .button-icons span {
   font-size: 5rem;
 }
 
-.buttons-start .main-screen .start {
+.buttons-start .main-screen .start-options .start {
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -455,7 +508,7 @@ header .icon {
   outline: none;
 }
 
-.buttons-start .main-screen .start:hover {
+.buttons-start .main-screen .start-options .start:hover {
   background-color: #f3b543c7;
   -webkit-box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
           box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
@@ -464,17 +517,17 @@ header .icon {
           transform: translateY(7px);
 }
 
-.buttons-start .main-screen .start.hard:hover {
+.buttons-start .main-screen .start-options .start.hard:hover {
   background-image: url("../images/bbth.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-.buttons-start .main-screen .start-hard .button-icons {
+.buttons-start .main-screen .start-options .start-hard .button-icons {
   position: relative;
 }
 
-.buttons-start .main-screen .start-hard .button-icons::before {
+.buttons-start .main-screen .start-options .start-hard .button-icons::before {
   content: 'For true fans of The Big Bang Theory!';
   position: absolute;
   top: 2rem;
@@ -491,7 +544,7 @@ header .icon {
   border-bottom: 5px solid #ddd;
 }
 
-.buttons-start .main-screen .start-hard .info-hard span {
+.buttons-start .main-screen .start-options .start-hard .info-hard span {
   position: relative;
   border-radius: 50%;
   font-size: 1.5rem;
@@ -502,7 +555,7 @@ header .icon {
   height: 3.5rem;
   color: #526060;
   position: absolute;
-  top: -4rem;
+  top: 0;
   right: -4rem;
   z-index: 2;
   -webkit-animation: spinning 5s linear infinite;
@@ -531,15 +584,14 @@ header .icon {
   }
 }
 
-.buttons-start .main-screen .start-hard .info-hard span:hover {
+.buttons-start .main-screen .start-options .start-hard .info-hard span:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-animation: stop;
           animation: stop;
 }
 
-.buttons-start .main-screen .start-hard .info-hard .info {
-  opacity: 0;
+.buttons-start .main-screen .start-options .start-hard .info-hard .info {
   width: 15rem;
   font-weight: 300;
   font-size: 1rem;
@@ -557,8 +609,41 @@ header .icon {
   line-height: 1.1rem;
 }
 
-.buttons-start .main-screen .start-hard .info-hard .info a {
+.buttons-start .main-screen .start-options .start-hard .info-hard .info a {
   color: black;
+}
+
+.fullscreen.fullscreen-enabled {
+  background-color: #f9f9f9;
+}
+
+.fullscreen.fullscreen-enabled h1 {
+  margin: 3rem;
+  font-weight: 300;
+}
+
+.fullscreen.fullscreen-enabled .full-screen {
+  bottom: 2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.3rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -590,6 +675,11 @@ header .icon {
     -webkit-transform: rotate(65deg);
             transform: rotate(65deg);
   }
+  .back {
+    font-size: 10px;
+    left: 3rem;
+    top: 7rem;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -600,10 +690,19 @@ header .icon {
 
 @media screen and (max-width: 500px) {
   :root {
-    font-size: 10px;
+    font-size: 11px;
+  }
+  .back {
+    left: 1rem;
   }
   .container {
     margin: 0 5rem;
+  }
+  .container .options span {
+    font-size: 8.2rem;
+  }
+  .container .options.icons-hard span {
+    font-size: 6.2rem;
   }
   .human-choice .answer,
   .comp-choice .answer {
@@ -611,6 +710,13 @@ header .icon {
   }
   .score {
     bottom: 0;
+  }
+  .buttons-start .main-screen::before {
+    top: 0rem;
+  }
+  .start-hard .info-hard {
+    top: 0rem;
+    right: -6rem;
   }
 }
 

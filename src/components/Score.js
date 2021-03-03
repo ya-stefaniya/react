@@ -1,5 +1,6 @@
 import { React, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useKeys } from '../hooks/useKeys';
 
 export const Score = ({ outcome, enabled, play,
     action, humanChoice, compChoice, reload }) => {

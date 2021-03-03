@@ -1,19 +1,19 @@
 import { React, useEffect, useState } from "react";
 
 export const InfoHard = () => {
-    const [style, setStyle] = useState({ opacity: '0' });
+    const [style, setStyle] = useState({ display: 'none' });
 
     return (
         <div className='info-hard'>
             <span className='span'
-                onMouseOver={() => setStyle({ opacity: '1' })}
-                onMouseOut={() => setStyle({ opacity: '0' })}>
+                onMouseOver={() => setStyle({ display: 'block' })}
+                onMouseOut={() => setStyle({ display: 'none' })}>
                 &#8265;
             </span>
 
             <div className='info' style={style}
-                onMouseOver={() => setStyle({ opacity: '1' })}
-                onMouseOut={() => setStyle({ opacity: '0' })}
+                onMouseOver={() => setStyle({ display: 'block' })}
+                onMouseOut={() => setStyle({ display: 'none' })}
             >
                 <p>In The Big Bang Theory, <b>Sheldon Cooper</b> explains an extension of the game Rock, Paper, Scissors by introducing two more possibilities, <b><i>Lizard and Spock</i></b>, so the game becomes Rock, Paper, Scissors, Lizard, Spock.
                 <br /><br />

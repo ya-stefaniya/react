@@ -2,9 +2,7 @@ import { React, useState, useEffect } from "react";
 import { Settings } from './Settings'
 import { Link } from 'react-router-dom';
 
-
 export const Header = ({ toggleSounds, enabled, play }) => {
-
     return (
         <>
             <header>
@@ -24,5 +22,3 @@ export const Header = ({ toggleSounds, enabled, play }) => {
 
     );
 }
-
-//sound ? '🔈' :

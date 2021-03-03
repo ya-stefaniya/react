@@ -4,17 +4,16 @@ import { useKeys } from '../hooks/useKeys';
 
 import back from '../sounds/back.mp3';
 
-
-
 export const Settings = ({ toggleSounds, enabled, play }) => {
 
     const [playing, toggle] = useMusic(back);
 
     const onKeypress = e => {
-        if (e.code === 'KeyM')
+        if (e.ctrlKey && e.code === 'KeyM')
             toggle();
-        if (e.code === 'KeyS')
+        if (e.ctrlKey && e.code === 'KeyS')
             toggleSounds();
+        if (!enabled) play({ id: 'cl2' })
     }
     useKeys(onKeypress);
 
@@ -23,7 +22,6 @@ export const Settings = ({ toggleSounds, enabled, play }) => {
             <span onClick={() => { toggleSounds(); if (!enabled) play({ id: 'cl2' }) }}> {enabled ? '🔈' : '🔇'}</span>
             <span onClick={toggle}> {playing ? '🔔' : '🔕'} </span>
             <span>&#129351;</span>
-            <span>&#128511;</span>
         </div >
     )
 }

@@ -98,7 +98,9 @@ header {
         margin: 0 0.5rem;
     }
 }
-
+.fullscreen-enabled {
+    background: rgb(255, 255, 255);
+}
 .container {
     margin: 0 15rem;
     display: flex;
@@ -119,13 +121,17 @@ header {
     .players {
         display: flex;
         justify-content: space-around;
-
         .result-header {
             display: flex;
             align-items: center;
             justify-content: space-around;
             width: 15rem;
-
+            &:first-child{
+            text-transform: uppercase;
+                h3{
+                font-weight: 300;
+                }
+            }
             span {
                 font-size: 2rem;
                 font-weight: 200;
@@ -214,6 +220,15 @@ header {
         @include cardAnimation(#afcad4);
     }
 }
+.full-screen{
+    position: absolute;
+    font-size: 2rem;
+    bottom: 1rem;
+    left: 1rem;
+    color: #b0c9d2;
+    box-shadow: 1px 2px 3px #c8c3c3;
+    cursor: pointer;
+}
 
 //картинки-карты игровые
 .human-choice,
@@ -238,7 +253,6 @@ header {
     cursor: pointer;
     outline: none;
     position: absolute;
-    left: 6;
     left: 3rem;
     &:hover {
         background-color:#f3b543c7;
@@ -251,10 +265,11 @@ header {
     .main-screen {
         display: flex;
         position: relative;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         justify-content: center;
-        margin: 6rem 5rem;
+        margin: 3rem 5rem;
         height: 100%;
         &:before {
             content: '';
@@ -263,121 +278,161 @@ header {
             width: 2px;
             height: 500px;
         }
-
-        .start-easy,
-        .start-hard {
-            display: flex;
-            align-items: center;
-        }
-
-        .button-icons {
-            display: flex;
-            flex-direction: column;
-
-            span {
-                font-size: 5rem;
-            }
-        }
-
-        .start {
-            text-decoration: none;
-            outline: none;
-            display: inline-block;
-            padding: 1.5rem 3rem;
-            margin: 1rem 5rem;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            background-color: #fff;
+        .name-input{
+            margin-bottom: 3rem;
             border: none;
-            border-radius: 45px;
-            box-shadow: 0 5px 10px  rgba(147, 153, 150, 0.4);
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
+            box-sizing: 3px 3px 3px black;
+            box-shadow: 0px 3px 9px #aba4a4ab;
+            padding: 0.4rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-size: 1rem;
             outline: none;
-
-            &:hover {
-                background-color:#f3b543c7;
-                box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
-                color: #fff;
-                transform: translateY(7px);
-            }
-            &.hard:hover {
-                background-image: url('../images/bbth.png');
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-            }
+            font-weight: 500;
+            letter-spacing: 0.11rem;
+            text-transform: uppercase;
         }
+        .start-options{
+            display: flex;
+            flex-direction: row;
+            .start-easy,
+            .start-hard {
+                display: flex;
+                align-items: center;
+            }
 
-        .start-hard {
             .button-icons {
-                position: relative;
-                &::before {
-                    content: 'For true fans of The Big Bang Theory!';
-                    position: absolute;
-                    top: 2rem;
-                    left: 6rem;
-                    width: 14rem;
-                    padding: 1em;
-                    background: #fff;
-                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-                    text-align: center;
-                    -webkit-transform: rotate(5deg) translate(-1em, 1em);
-                    transform: rotate(5deg) translate(-1em, 1em);
-                    border-top: 5px solid #da513d;
-                    border-bottom: 5px solid #ddd;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 5rem;
                 }
             }
-            .info-hard{
-                span{
+            .start {
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                padding: 1.5rem 3rem;
+                margin: 1rem 5rem;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                background-color: #fff;
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0 5px 10px  rgba(147, 153, 150, 0.4);
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                outline: none;
+
+                &:hover {
+                    background-color:#f3b543c7;
+                    box-shadow: 0px 2px 9px rgba(147, 153, 150, 0.4);
+                    color: #fff;
+                    transform: translateY(7px);
+                }
+                &.hard:hover {
+                    background-image: url('../images/bbth.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+
+            .start-hard {
+                .button-icons {
                     position: relative;
-                    border-radius: 50%;
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    background-color: #e8cd9069;
-                    padding: 1rem;
-                    width: 3.5rem;
-                    height: 3.5rem;
-                    color: #526060;
-                    position: absolute;
-                    top: -4rem;
-                    right: -4rem;
-                    z-index: 2;
-                    animation: spinning 5s linear infinite;
-                    @keyframes spinning {
-                        from {
-                            transform: rotate(0deg);
-                        }
-                        to {
-                            transform: rotate(360deg);
-                        }
+                    &::before {
+                        content: 'For true fans of The Big Bang Theory!';
+                        position: absolute;
+                        top: 2rem;
+                        left: 6rem;
+                        width: 14rem;
+                        padding: 1em;
+                        background: #fff;
+                        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                        text-align: center;
+                        -webkit-transform: rotate(5deg) translate(-1em, 1em);
+                        transform: rotate(5deg) translate(-1em, 1em);
+                        border-top: 5px solid #da513d;
+                        border-bottom: 5px solid #ddd;
                     }
-                    &:hover{
-                        transform: scale(1.2);
-                        animation: stop;
-                    }
-                }   
-                .info{
-                    opacity: 0;
-                    width: 15rem;
-                    font-weight: 300;
-                    font-size: 1rem;
-                    color: black;
-                    background: white;
-                    text-align: justify;
-                    position: absolute;
-                    border: 1px solid #da513d;
-                    right: -2rem;
-                    padding: 1rem;
-                    z-index: 3;
-                    top: -2rem;
-                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-                    line-height: 1.1rem;
-                    a{
+                }
+                .info-hard{
+                    span{
+                        position: relative;
+                        border-radius: 50%;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        background-color: #e8cd9069;
+                        padding: 1rem;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        color: #526060;
+                        position: absolute;
+                        top: 0;
+                        right: -4rem;
+                        z-index: 2;
+                        animation: spinning 5s linear infinite;
+                        @keyframes spinning {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.2);
+                            animation: stop;
+                        }
+                    }   
+                    .info{
+                        width: 15rem;
+                        font-weight: 300;
+                        font-size: 1rem;
                         color: black;
+                        background: white;
+                        text-align: justify;
+                        position: absolute;
+                        border: 1px solid #da513d;
+                        right: -2rem;
+                        padding: 1rem;
+                        z-index: 3;
+                        top: -2rem;
+                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+                        line-height: 1.1rem;
+                        a{
+                            color: black;
+                        }
                     }
                 }
             }
         }
+    }
+}
+.fullscreen{
+    &.fullscreen-enabled{
+        background-color: #f9f9f9;
+        h1{
+            margin: 3rem;
+            font-weight: 300;;
+        }
+        .full-screen{
+        bottom: 2rem;
+        }
+    }
+}
+.footer{
+    position: absolute;
+    bottom: 0.3rem;
+    transform: translateX(-50%);
+    left: 50%;
+    align-items: center;
+    display: flex;
+    a{
+        text-decoration: none;
+        color:black;
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 1200px){
@@ -410,6 +465,11 @@ header {
             }
         }
     }
+    .back{
+    font-size: 10px;
+    left: 3rem;
+    top: 7rem;
+    }
 }
 @media screen and (max-width: 585px){
     header{
@@ -420,10 +480,23 @@ header {
 }
 @media screen and (max-width: 500px){
     :root{
-    font-size: 10px;
+    font-size: 11px;
+    }
+    .back{
+      left:1rem;
     }
     .container{
         margin: 0 5rem;
+        .options{
+            span{
+                font-size: 8.2rem;
+            }
+            &.icons-hard{
+                span{
+                font-size: 6.2rem;
+                }
+            }
+        }
     }
     .human-choice,
     .comp-choice{
@@ -433,6 +506,19 @@ header {
     } 
     .score{
         bottom:0;
+    }
+    .buttons-start{
+        .main-screen{
+            &::before{
+                top: 0rem;
+            }
+        }
+    }
+    .start-hard {
+        .info-hard{
+            top: 0rem;
+            right: -6rem;
+        }
     }
 }
 @media screen and (max-width: 310px){
